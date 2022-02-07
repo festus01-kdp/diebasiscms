@@ -1,0 +1,47 @@
+.footer-dark {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: #000000;
+  background-color: #8bcbbd;
+}
+
+.footer-dark h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item:not(.social) {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width:767px) {
+  .footer-dark .item.text {
+    margin-bottom: 0;
+  }
+}
+
+.footer-dark .item.text p {
+  opacity: 0.6;
+  margin-bottom: 0;
+}
+
+.footer-dark .copyright {
+  text-align: right;
+  padding-top: 8px;
+  opacity: 0.75;
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+.footer-heading {
+  margin-left: 18px;
+}
+
+.main-card {
+}
+

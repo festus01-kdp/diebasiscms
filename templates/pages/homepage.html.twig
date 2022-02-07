@@ -1,7 +1,284 @@
-{% extends "base.html.twig" %}
+{% extends "basediebasiscms.html.twig" %}
 
 {% block content %}
-    <h1>{{ content.title }}</h1>
 
-    {{ content.article|raw }}
+<body>
+    <section id="kopf">
+        <nav class="navbar navbar-light navbar-expand-md diebasis-navbar" style="background: rgba(240,236,227,0.49);">
+            <div class="container-fluid"><a class="navbar-brand pt-0 pb-0" href="/">
+                    <div><img src="/assets/img/dieBasis-LOGO-kv-diepholz-nienburg.svg" style="width: 150px;"></div>
+                </a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navcol-2">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active scrollto" href="/">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link text-nowrap scrollto" href="/#wir-stehen-fuer">DER KREISVERBAND</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="/#unser-team">UNSER TEAM</a></li>
+                        <li class="nav-item dropdown"><a class="nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#">DIEBASIS</a>
+                            <div class="dropdown-menu dropdown-content dropdown-style"><a class="dropdown-item" href="#about-us">über uns</a><a class="dropdown-item" href="systemisches_konsensieren.html">Systemisches<br>Konsensieren</a><a class="dropdown-item" href="wir-wollen-dich.html">Wir wollen...</a><a class="dropdown-item" href="https://mitgliedsantrag.diebasis-partei.de/index.html" target="_blank">Mitglied werden<br>online</a><a class="dropdown-item" href="https://diebasis-partei.de/wp-content/uploads/2020/09/Antrag-auf-Mitgliedschaft-2020-V006.pdf" target="_blank">Mitgliedsantrag<br>downloaden</a><a class="dropdown-item" href="blog.html">Blog</a>
+                                <div class="dropdown-divider"></div><a class="dropdown-item" href="geschichte.html">unsere Historie</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown"><a class="nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#">AG's</a>
+                            <div class="dropdown-menu dropdown-content dropdown-style"><a class="dropdown-item" href="arbeitsgruppen.html#ag-frieden">Frieden</a><a class="dropdown-item" href="arbeitsgruppen.html#ag-presse">Presse</a><a class="dropdown-item" href="arbeitsgruppen.html#ag-selbstversorgung">Selbstversorgung</a><a class="dropdown-item" href="arbeitsgruppen.html#ag-bildung">Bildung</a><a class="dropdown-item" href="arbeitsgruppen.html#ag-it">IT</a><a class="dropdown-item" href="arbeitsgruppen.html#ag-konsensierung">Konsensierung</a><a class="dropdown-item" href="#">Meditation</a><a class="dropdown-item" href="arbeitsgruppen.html#ag-landtagswahl">Landtagswahl</a></div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="kontakt.html">KONTAKT</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <header style="background: url(&quot;/assets/img/photo5416081578938971835-1200.png&quot;) center / cover no-repeat;background-position: 0px -20px;">
+            <div class="container">
+                <div class="row row-header-background">
+                    <div class="col column-header">
+                        <div class="text-center">
+                            <h1 class="text-break header-main-title" data-aos="fade-up" data-aos-duration="500">{{ content.homepageheadline }}</h1>
+                            <p class="lead" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200"><strong>{{ content.homepagesubline }}</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </section>
+    <section id="gruendung-1" class="gruendung">
+        <div class="text-center" style="margin-top: 40px;">
+            <h2 data-aos="fade-up" data-aos-duration="500" class="section-title" style="color: rgba(33,37,41,0.71);padding-top: 30px;">Vorstandswahl am 16.01.2022</h2>
+            <hr data-aos="fade" data-aos-duration="500" data-aos-delay="200" class="hr-line">
+        </div>
+        <div class="container main-wrap">
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <p>Da der Vorstand, der bei der Gründung am 14.05.2021 gewählt wurde, zurückgetreten ist, wurde eine Neuwahl nötig.&nbsp;</p>
+                        <p class="mb-2">Diese wurde am 16.01.2022 mit 25 Mitgliedern durchgeführt.</p>
+                        <p class="mb-2">Gewählt wurden:</p>
+                        <p class="mb-2">Iris Günter: 1. Vorsitzende<br>Heike Gersthagen: 2. Vorsitzende<br>Karsten Dietrich: Schatzmeister<br>Christine: stellvertr. Schatzmeisterin</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="unser-team" class="unser-team">
+        <div class="text-center">
+            <h2 data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">UNSER TEAM</h2>
+            <hr data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" class="hr-line">
+        </div>
+        <div class="container main-wrap">
+            <div class="row">
+                <div class="col col-lg-3 col-md-6 col-sm-6 d-flex align-item-stretch team">
+                    <div class="member">
+                        <div class="member-img"><img id="iris-guenther" class="img-fluid" src="/assets/img/PlatzhalterBild.png" alt="Iris Günter">
+                            <div class="social"><a href="mailto:iris.guenther@diebasis-ni.de?subject=Anfrage&amp;body=Sehr geehrte Frau Günther"><i class="fa fa-envelope"></i></a></div>
+                        </div>
+                        <div class="member-info">
+                            <h5 class="member-title">Iris Günther</h5><span style="color: var(--bs-gray);">Vorsitzende</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-lg-3 col-md-6 col-sm-6 d-flex align-item-stretch team">
+                    <div class="member">
+                        <div class="member-img"><img class="img-fluid" src="/assets/img/HeikeGersthagen-web.png" alt="Heike Gersthagen">
+                            <div class="social"><a href="mailto:heike.gersthagen@diebasis-ni.de?subject=Anfrage&amp;body=Sehr geehrte Frau Gersthagen"><i class="fa fa-envelope"></i></a></div>
+                        </div>
+                        <div class="member-info">
+                            <h5 class="member-title">Heike Gersthagen</h5><span style="color: var(--bs-gray);">stellv. Vorsitzende</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-lg-3 col-md-6 col-sm-6 d-flex align-item-stretch team">
+                    <div class="member">
+                        <div class="member-img"><img class="img-fluid" src="/assets/img/PlatzhalterBild.png" alt="Karsten Dietrich">
+                            <div class="social"><a href="mailto:karsten.dietrich@diebasis-ni.de?subject=Anfrage&amp;body=Sehr geehrter Herr Dietrich"><i class="fa fa-envelope"></i></a></div>
+                        </div>
+                        <div class="member-info">
+                            <h5 class="member-title">Karsten Dietrich<br></h5><span style="color: var(--bs-gray);">Schatzmeister</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-lg-3 col-md-6 col-sm-6 d-flex align-item-stretch team">
+                    <div class="member">
+                        <div class="member-img"><img class="img-fluid" src="/assets/img/PlatzhalterBild.png" alt="Christine Hilsebein">
+                            <div class="social"><a href="mailto:christine.hilsebein@diebasis-ni.de?subject=Anfrage&amp;body=Sehr geehrter Frau Hilsebein"><i class="fa fa-envelope"></i></a></div>
+                        </div>
+                        <div class="member-info">
+                            <h5 class="member-title">Christine Hilsebein<br></h5><span style="color: var(--bs-gray);">stellv. Schatzmeisterin</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-lg-3 col-md-6 col-sm-6 d-flex align-item-stretch team">
+                    <div class="member">
+                        <div class="member-img"><img class="img-fluid" src="/assets/img/Elisabeth_Lammers-Freiheit.png" alt="Elisabeth Lammers">
+                            <div class="social"><a href="mailto:elisabeth.llammers@diebasis-ni.de?subject=Anfrage&amp;body=Sehr geehrter Frau Lammers"><i class="fa fa-envelope"></i></a></div>
+                        </div>
+                        <div class="member-info">
+                            <h5 class="member-title">Elisabeth Lammers<br></h5><span style="color: var(--bs-gray);">Säule Freiheit<br></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-lg-3 col-md-6 col-sm-6 d-flex align-item-stretch team">
+                    <div class="member">
+                        <div class="member-img"><img class="img-fluid" src="/assets/img/7215123-2687.jpg" alt="Oliver Kunstmann">
+                            <div class="social"><a href="https://www.oliverkunstmann.de" target="_blank"><i class="fa fa-home" data-bs-toggle="tooltip" data-bss-tooltip="" title="Homepage Oliver"></i></a><a href="mailto:oliver.kunstmann@diebasis-ni.de?subject=Anfrage&amp;body=Sehr geehrter Herr Kunstmann"><i class="fa fa-envelope" data-bs-toggle="tooltip" data-bss-tooltip="" title="E-Mail an Oliver"></i></a></div>
+                        </div>
+                        <div class="member-info">
+                            <h5 class="member-title">Oliver Kunstmann</h5><span style="color: var(--bs-gray);">Säule Machtbegrenzung<br></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-lg-3 col-md-6 col-sm-6 d-flex align-item-stretch team">
+                    <div class="member">
+                        <div class="member-img"><img class="img-fluid" src="/assets/img/7215123-2612.jpg" alt="Jens Schuler">
+                            <div class="social"><a href="mailto:jens.schuler@diebasis-ni.de?subject=Anfrage&amp;body=Sehr geehrter Herr Schuler"><i class="fa fa-envelope"></i></a></div>
+                        </div>
+                        <div class="member-info">
+                            <h5 class="member-title">Jens Schuler</h5><span style="color: var(--bs-gray);">Säule Achtsamkeit<br></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-lg-3 col-md-6 col-sm-6 d-flex align-item-stretch team">
+                    <div class="member">
+                        <div class="member-img"><img class="img-fluid" src="/assets/img/brigitte_stoever_schwarm.png" alt="Brigitte Stöver">
+                            <div class="social"><a href="mailto:brigitte.stoever@diebasis-ni.de?subject=Anfrage&amp;body=Sehr geehrter Frau Balschun"><i class="fa fa-envelope"></i></a></div>
+                        </div>
+                        <div class="member-info">
+                            <h5 class="member-title">Brigitte Stöver</h5><span style="color: var(--bs-gray);">Säule Schwarmintelligenz<br></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about-us" class="about-us">
+        <div class="text-center" style="margin-top: 40px;">
+            <h2 data-aos="fade-up" data-aos-duration="500" class="section-title" style="color: rgba(33,37,41,0.71);padding-top: 30px;">ÜBER UNS</h2>
+            <hr data-aos="fade" data-aos-duration="500" data-aos-delay="200" class="hr-line">
+        </div>
+        <div class="container main-wrap">
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <p class="text-start">Direkte Demokratie ist das Ziel unserer Partei! Diese Möglichkeit der Beteiligung des Volkes an der Entscheidung von Sachfragen ist derzeit weder im Grundgesetz noch in den Landesverfassungen umfänglich vorgesehen.<br><br>Wir wollen Mehrheiten gewinnen, um relevante Positionen durch&nbsp;<strong>kompetente</strong>&nbsp;<strong>und ihre Verantwortung lebende</strong>&nbsp;<strong>Menschen&nbsp;</strong>besetzen zu können. Im Parlament letztendlich sollen direkt gewählte und wahrhaftige Volksvertreter sitzen.<br><br>Die Basis arbeitet fortlaufend an Systemen und Strukturen&nbsp;<strong>für eine offene und gepflegte Debattenkultur und breitflächige&nbsp;Volksabstimmungen&nbsp;</strong>zu allen unsere Gesellschaft betreffenden Themen.<br><br>Unsere Partei wird von vier Säulen getragen:</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                    <div style="text-align: center;">
+                        <h6 style="color: var(--bs-light);background: rgb(25,135,38);"><br>FREIHEIT<br><br></h6>
+                        <p class="text-break text-saeulen text-trennung-auto" style="background: rgb(25,135,38);color: var(--bs-light);font-size: 18px;text-align: left;border-right: 8px solid rgb(25,135,38);border-left: 8px solid rgb(25,135,38);"><br>Die Freiheitsrechte sind die wichtigsten Grundrechte.Eine freiheitliche Gesellschaft kann es nur geben, wenn Macht und Machtstrukturen begrenzt und kontrolliert werden.<br></p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                    <div style="text-align: center;">
+                        <h6 style="color: var(--bs-light);background: rgb(2,34,111);"><br>MACHTBEGRENZUNG<br><br></h6>
+                        <p class="text-break text-saeulen text-trennung-auto" style="background: rgb(2,34,111);color: var(--bs-light);font-size: 18px;text-align: left;border-right: 8px solid rgb(2,34,111) ;border-left: 8px solid rgb(2,34,111) ;"><br>Das Zusammenleben der Bürgerinnen und Bürger erfordert Aufmerksamkeit, Achtsamkeit und Übernahme von Verantwortung im Sinne von Eigen- und Fremdverantwortung.<br></p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                    <div style="text-align: center;">
+                        <h6 style="color: var(--bs-light);background: rgb(208,0,24);"><br>ACHTSAMKEIT<br><br></h6>
+                        <p class="text-break text-saeulen text-trennung-auto" style="background: rgb(208, 0, 24);color: var(--bs-light);font-size: 18px;text-align: left;border-right: 8px solid rgb(208,0,24) ;border-left: 8px solid rgb(208,0,24) ;"><br>Das Menschsein und die Beachtung der Menschlichkeit des anderen dienen als Leitbild in einer freiheitlichen Gesellschaft, in der die Menschen einen liebevollen, friedlichen Umgang miteinander pflegen.<br></p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                    <div style="text-align: center;">
+                        <h6 style="color: var(--bs-light);background: rgb(233,120,9);"><br>SCHWARMINTELLIGENZ<br><br></h6>
+                        <p class="text-break text-saeulen text-trennung-auto" style="background: rgb(233,120,9);color: var(--bs-light);font-size: 18px;text-align: left;border-right: 8px solid rgb(233,120,9) ;border-left: 8px solid rgb(233,120,9) ;">bedeutet, die Weisheit der Vielen in konkrete Politik zu verwandeln. Oftmals reicht Expertenwissen allein nicht aus, um komplexe, fachübergreifende Themengebiete zu erfassen, denn nur ein aus vielen verschiedenen Perspektiven betrachtetes Problem lässt sich in seiner Gesamtheit erkennen und lösen.<br></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="wir-stehen-fuer" class="wir-stehen-fuer">
+        <div class="text-center">
+            <h2 data-aos="fade-up" data-aos-duration="500">Wir stehen für</h2>
+            <hr data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" class="hr-line">
+        </div>
+        <div class="container mt-1">
+            <div class="row text-center mb-4">
+                <div class="col mb-2">
+                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300"><img src="/assets/img/dieBasis-LOGO-kv-diepholz-nienburg.svg" alt="dieBasis Kreisverband Diepholz Nienburg" width="280"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <p class="text-start" style="color: rgb(33, 37, 41);font-size: 18px;">Die Partei Basisdemokratische Partei Deutschland vereinigt Menschen ohne Unterschied der Staatsangehörigkeit, des Standes, der Herkunft, der ethnischen Zugehörigkeit, des Geschlechts, der sexuellen Orientierung und des Bekenntnisses, die beim Aufbau und Ausbau eines demokratischen Rechtsstaates und einer modernen freiheitlichen Gesellschaftsordnung, geprägt vom Geiste sozialer Gerechtigkeit, mitwirken wollen.<br><br>Totalitäre, diktatorische und oder gewalttätige Bestrebungen jeder Art lehnt die Partei Basisdemokratische Partei Deutschland entschieden ab.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="section-lv-dhni">
+                        <h2>Wir stehen für</h2>
+                        <div>
+                            <h5 class="heading-wir-stehen-fuer"><strong>Basisdemokratie</strong></h5>
+                            <ul>
+                                <li>Alle an einem Thema Interessierten können Vorschläge machen und unmittelbar abstimmen.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="heading-wir-stehen-fuer"><strong>Echte Meinungsfreiheit</strong><br></h5>
+                            <ul>
+                                <li>Jeder Mensch kann seine Meinung frei äußern, ohne gesellschaftliche oder berufliche Repression befürchten zu müssen.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="heading-wir-stehen-fuer"><strong>Informationsfreiheit</strong><br></h5>
+                            <ul>
+                                <li>Alle Informationen werden ohne Zensur frei zugänglich zur Verfügung gestellt.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="heading-wir-stehen-fuer"><strong>Expertenkommissionen</strong><br></h5>
+                            <ul>
+                                <li>Wichtige Entscheidungen werden durch Experten verschiedener Denkrichtungen begleitet und vorbereitet.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="heading-wir-stehen-fuer"><strong>Machtbegrenzung in der Politik</strong><br></h5>
+                            <ul>
+                                <li>Die Anzahl politischer Ämter ist transparent und begrenzt. Unabhängige Ausschüsse kontrollieren dies regelmäßig.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="heading-wir-stehen-fuer"><strong>Mitspracherecht mündiger Bürgerinnen &amp; Bürger</strong><br></h5>
+                            <ul>
+                                <li>Alle durch eine Entscheidung Betroffenen werden objektiv informiert und eingebunden.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="heading-wir-stehen-fuer"><strong>Gesunde Zukunft unserer Kinder</strong><br></h5>
+                            <ul>
+                                <li>Das Wohl von Kindern und Familien steht da im Vordergrund. Das Recht auf Bildung und Gesundheit steht allen zu.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="heading-wir-stehen-fuer"><strong>Freie Impfentscheidung</strong><br></h5>
+                            <ul>
+                                <li>Jeder soll frei und ohne Zwang über Impfungen und jede andere Gesundheitsmaßnahme entscheiden.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="heading-wir-stehen-fuer"><strong>Bildung</strong><br></h5>
+                            <ul>
+                                <li>Freie Schulen in Selbstverwaltung.</li>
+                                <li>Anlagen der Kinder fördern.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div><a class="back-to-top hvr-back-pulse" href="#"><i class="fa fa-angle-up" style="color: rgb(37,178,231);"></i></a></div>
+
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="/assets/js/clean-blog.js"></script>
+    <script src="/assets/js/diebasis.js"></script>
+    <script src="/assets/js/lightbox.js"></script>
+</body>
+
 {% endblock %}

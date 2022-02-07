@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="{{ app.request.locale|split('_')[0] }}">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta property="og:url" content="https://www.diebasis-diepholz-nienburg.de">
+		<meta property="og:title" content="dieBasis">
+		<meta property="og:type" content="website">
+		<meta property="og:image" content="assets/img/LogoNavbar.png">
+		<meta name="description" content="Partei dieBasis Kreisverband Diepholz Nienburg">
+		{% block meta %}
+			{% include "@SuluWebsite/Extension/seo.html.twig" with {
+            "seo": extension.seo|default([]),
+            "content": content|default([]),
+            "localizations": localizations|default([]),
+            "shadowBaseLocale": shadowBaseLocale|default(),
+            
+        } %}
+		{% endblock %}
+
+		{% block style %}
+			<link rel="icon" type="image/png" sizes="300x300" href="/assets/img/IconWeb.png">
+			<link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800&amp;display=swap">
+			<link rel="stylesheet" href="/assets/fonts/fontawesome-all.min.css">
+			<link rel="stylesheet" href="/assets/fonts/font-awesome.min.css">
+			<link rel="stylesheet" href="/assets/fonts/fontawesome5-overrides.min.css">
+			<link rel="stylesheet" href="/assets/css/Footer-Dark.css">
+			<link rel="stylesheet" href="/assets/css/hover.css">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+			<link rel="stylesheet" href="/assets/css/lightbox.css">
+			<link rel="stylesheet" href="/assets/css/Newsletter-Subscription-Form.css">
+			<link rel="stylesheet" href="/assets/css/styles.css">
+			<link rel="stylesheet" href="/assets/css/timeline.css">
+		{% endblock %}
+	</head>
+	<body>
+		<header>
+			{% block header %}{% endblock %}
+		</header>
+
+
+		<main>
+			{% block content %}{% endblock %}
+		</main>
+
+		<footer>
+			{% block footer %}
+				<section id="footer" class="footer">
+					<footer class="footer-dark">
+						<div class="container">
+							<div class="row" style="margin-bottom: -16px;">
+								<div class="col text-center mb-3">
+									<h4>Spendenkonto</h4>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col item text">
+									<div>
+										<p>per Banküberweisung<br><br>Basidemokratische Partei Deutschland<br>Kreisverband Diepholz<br><strong>IBAN:</strong>
+											DE28 2505 0180 0910 5121 16<br><strong>BIC:</strong>&nbsp;SPKHDE2HXXX</p>
+									</div>
+								</div>
+							</div>
+							<div class="col item">
+								<h3 class="footer-heading">WIR IM NETZ</h3>
+								<div>
+									<div class="col item social-media-icons">
+										<a class="social-media-icons-padding" href="https://telegram.me/die_basis_funkt" target="_blank">
+											<i class="fab fa-telegram"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<a href="index.html">
+										<p class="copyright">dieBasis KV Diepholz-Nienburg © 2022</p>
+									</a>
+								</div>
+								<div class="col">
+									<div class="copyright text-start">
+										<a class="me-1" href="impressum.html">Impressum</a>
+										<a class="ms-1" href="datenschutz.html">Datenschutz</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</footer>
+				</section>
+			{% endblock %}
+		</footer>
+
+		{% block javascripts %}
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+			<script src="/assets/js/bs-init.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+			<script src="/assets/js/clean-blog.js"></script>
+			<script src="/assets/js/diebasis.js"></script>
+			<script src="/assets/js/lightbox.js"></script>
+		{% endblock %}
+	</body>
+</html>

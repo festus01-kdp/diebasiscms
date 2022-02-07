@@ -36,11 +36,17 @@
             <tag name="sulu.rlp"/>
         </property>
 
-        <property name="article" type="text_editor">
+        <property name="homepageheadline" type="text_line">
             <meta>
-                <title lang="en">Article</title>
-                <title lang="de">Artikel</title>
+                <title>Headline</title>
             </meta>
         </property>
+        
+        <property name="homepagesubline" type="text_line">
+            <meta>
+                <title>Subline</title>
+            </meta>
+        </property>
+
     </properties>
 </template>
