@@ -1,0 +1,60 @@
+{% extends "basediebasiscms.html.twig" %}
+
+{% block content %}
+	<body>
+		<section class="section-wir-wollen-dich">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="div-heading">
+							<h2 class="heading-bolder">
+								<strong>{{ content.wirwollendichheadlinelinks }}</strong>
+							</h2>
+							<p class="text-trennung-auto p-semiheader">
+								<strong>{{ content.wirwollendichsublinelinks }}</strong>
+							</p>
+						</div>
+                        {% for item in content.spaltelinksrechts %}      
+                        {% if item.headerlinelinks and item.artikellinelinks %}                 
+                        <div class="div-aufzaehlung">
+							<h5 class="heading-bolder">
+								<strong>{{ item.headerlinelinks }}</strong>
+							</h5>
+                            <div class="p-inhalt">
+							    {{ item.artikellinelinks|raw }}
+                            </div>
+						</div>
+                        {% endif %}
+                        {% endfor %}
+					</div>
+					<div class="col">
+						<div class="div-heading">
+							<h2 class="heading-bolder">
+								<strong>{{ content.wirwollendichheadlinerechts }}</strong>
+							</h2>
+                            {% if content.wirwollendichsublinerechts %}
+                            <p class="text-trennung-auto p-semiheader">
+								<strong>{{ content.wirwollendichsublinerechts }}</strong>
+							</p>
+                            {% endif %}
+						</div>
+                        {% for item in content.spaltelinksrechts %}      
+                        {% if item.headerlinerechts and item.artikellinerechts %}                 
+                        <div class="div-aufzaehlung">
+							<h5 class="heading-bolder-small">
+								<strong>{{ item.headerlinerechts }}</strong>
+							</h5>
+                            <div class="p-inhalt">
+							    {{ item.artikellinerechts|raw }}
+                            </div>
+						</div>
+                        {% endif %}
+                        {% endfor %}
+					</div>
+				</div>
+			</div>
+		</section>
+		<div><a class="back-to-top hvr-back-pulse" href="#"><i class="fa fa-angle-up" style="color: rgb(37,178,231);"></i></a></div>
+		
+	</body>
+{% endblock %}

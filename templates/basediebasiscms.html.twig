@@ -36,6 +36,61 @@
 		{% endblock %}
 	</head>
 	<body>
+		<section id="diebasisnavbar">
+			<nav class="navbar navbar-light navbar-expand-md diebasis-navbar" style="background: rgba(240,236,227,0.49);">
+				<div class="container-fluid">
+					<a class="navbar-brand pt-0 pb-0" href="/">
+						<div><img src="/assets/img/dieBasis-LOGO-kv-diepholz-nienburg.svg" style="width: 150px;"></div>
+					</a>
+					<button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2">
+						<span class="visually-hidden">Toggle navigation</span>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navcol-2">
+						<ul class="navbar-nav ms-auto">
+							<li class="nav-item">
+								<a class="nav-link active scrollto" href="/">HOME</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link text-nowrap scrollto" href="/#wir-stehen-fuer">DER KREISVERBAND</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link scrollto" href="/#unser-team">UNSER TEAM</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#">DIEBASIS</a>
+								<div class="dropdown-menu dropdown-content dropdown-style">
+									<a class="dropdown-item" href="/#about-us">über uns</a>
+									<a class="dropdown-item" href="konsensieren">Systemisches<br>Konsensieren</a>
+									<a class="dropdown-item" href="wirwollendich">Wir wollen...</a>
+									<a class="dropdown-item" href="https://mitgliedsantrag.diebasis-partei.de/index.html" target="_blank">Mitglied werden<br>online</a>
+									<a class="dropdown-item" href="https://diebasis-partei.de/wp-content/uploads/2020/09/Antrag-auf-Mitgliedschaft-2020-V006.pdf" target="_blank">Mitgliedsantrag<br>downloaden</a>
+									<a class="dropdown-item" href="blog.html">Blog</a>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item" href="geschichte.html">unsere Historie</a>
+								</div>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#">AG's</a>
+								<div class="dropdown-menu dropdown-content dropdown-style">
+									<a class="dropdown-item" href="arbeitsgruppen.html#ag-frieden">Frieden</a>
+									<a class="dropdown-item" href="arbeitsgruppen.html#ag-presse">Presse</a>
+									<a class="dropdown-item" href="arbeitsgruppen.html#ag-selbstversorgung">Selbstversorgung</a>
+									<a class="dropdown-item" href="arbeitsgruppen.html#ag-bildung">Bildung</a>
+									<a class="dropdown-item" href="arbeitsgruppen.html#ag-it">IT</a>
+									<a class="dropdown-item" href="arbeitsgruppen.html#ag-konsensierung">Konsensierung</a>
+									<a class="dropdown-item" href="#">Meditation</a>
+									<a class="dropdown-item" href="arbeitsgruppen.html#ag-landtagswahl">Landtagswahl</a>
+								</div>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link scrollto" href="kontakt.html">KONTAKT</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</section>
 		<header>
 			{% block header %}{% endblock %}
 		</header>
@@ -75,7 +130,7 @@
 							</div>
 							<div class="row">
 								<div class="col">
-									<a href="index.html">
+									<a href="/">
 										<p class="copyright">dieBasis KV Diepholz-Nienburg © 2022</p>
 									</a>
 								</div>

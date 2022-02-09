@@ -1,0 +1,103 @@
+<?xml version="1.0" ?>
+<template xmlns="http://schemas.sulu.io/template/template"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+
+    <key>wirwollendich</key>
+
+    <view>pages/wirwollendich</view>
+    <controller>Sulu\Bundle\WebsiteBundle\Controller\DefaultController::indexAction</controller>
+    <cacheLifetime>604800</cacheLifetime>
+
+    <meta>
+        <title>Wir wollen Dich</title>
+    </meta>
+
+    <properties>
+        <property name="title" type="text_line" mandatory="true">
+            <meta>
+                <title>Title</title>
+            </meta>
+            <params>
+                <param name="headline" value="true"/>
+            </params>
+
+            <tag name="sulu.rlp.part"/>
+        </property>
+
+        <property name="url" type="resource_locator" mandatory="true">
+            <meta>
+                <title lang="en">Resourcelocator</title>
+                <title lang="de">Adresse</title>
+            </meta>
+
+            <tag name="sulu.rlp"/>
+        </property>
+        <property name="wirwollendichheadlinelinks" type="text_line" colspan="6">
+            <meta>
+                <title>Headline links</title>
+            </meta>
+        </property>
+        <property name="wirwollendichheadlinerechts" type="text_line" colspan="6">
+            <meta>
+                <title>Headline rechts</title>
+            </meta>
+        </property>
+        <property name="wirwollendichsublinelinks" type="text_line" colspan="6">
+            <meta>
+                <title>Subline links</title>
+            </meta>
+        </property>
+        <property name="wirwollendichsublinerechts" type="text_line" colspan="6">
+            <meta>
+                <title>Subline rechts</title>
+            </meta>
+        </property>
+        
+
+        <section name="spaltelinksrechts">
+            <meta>
+                <title>Spalten links/rechts</title>
+            </meta>
+            <properties>
+                <block name="spaltelinksrechts" default-type="text">
+                    <meta>
+                        <title>Spalten</title>
+                    </meta>
+                    <types>
+                        <type name="text">
+                            <meta>
+                                <title>Text</title>
+                            </meta>
+                            <properties>
+                                <property name="headerlinelinks" type="text_line" colspan="6">
+                                    <meta>
+                                        <title>Headerline links</title>
+                                    </meta>
+                                </property>
+                                <property name="headerlinerechts" type="text_line" colspan="6">
+                                    <meta>
+                                        <title>Headerline rechts</title>
+                                    </meta>
+                                </property>
+                                <property name="artikellinelinks" type="text_editor" colspan="6">
+                                    <meta>
+                                        <title>Artikelline links</title>
+                                    </meta>
+                                </property>
+                                <property name="artikellinerechts" type="text_editor" colspan="6">
+                                    <meta>
+                                        <title>Artikelline rechts</title>
+                                    </meta>
+                                </property>
+                            </properties>
+                        </type>
+                    </types>
+                </block>
+            </properties>
+        </section>
+
+    </properties>
+
+    
+
+</template>

@@ -1,7 +1,6 @@
 <?xml version="1.0" ?>
 <template xmlns="http://schemas.sulu.io/template/template"
-          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
 
     <key>homepage</key>
 
@@ -41,12 +40,96 @@
                 <title>Headline</title>
             </meta>
         </property>
-        
+
         <property name="homepagesubline" type="text_line">
             <meta>
                 <title>Subline</title>
             </meta>
         </property>
 
+        <section name="homepagegruendungartikel">
+            <meta>
+                <title>Subheader</title>
+            </meta>
+            <properties>
+                <property name="homepagegruendungheadline" type="text_line">
+                    <meta>
+                        <title>Artikel 1</title>
+                    </meta>
+                </property>
+
+                <property name="homepagegruendungsubline" type="text_editor">
+                    <meta>
+                        <title>Subline 1</title>
+                    </meta>
+                </property>
+            </properties>
+        </section>
+
+        <section name="homepageueberuns">
+            <meta>
+                <title>Über uns</title>
+            </meta>
+            <properties>
+                <property name="hoepageueberunsheadline" type="text_line">
+                    <meta>
+                        <title>Headline</title>
+                    </meta>
+                </property>
+                <property name="homepageueberunssubline" type="text_editor">
+                    <meta>
+                        <title>Subline</title>
+                    </meta>
+                </property>
+            </properties>
+        </section>
+
+        <section name="homepagesaeulen">
+            <meta>
+                <title>Säulen</title>
+            </meta>
+            <properties>
+                <property name="homepagesaeule1header" type="text_line" colspan="4">
+                    <meta>
+                        <title>Header Säule 1</title>
+                    </meta>
+                </property>
+                <property name="homepagesaeule1subline" type="text_area" colspan="8">
+                    <meta>
+                        <title>Subline Säule 1</title>
+                    </meta>
+                </property>
+                <property name="homepagesaeule2header" type="text_line" colspan="4">
+                    <meta>
+                        <title>Header Säule 2</title>
+                    </meta>
+                </property>
+                <property name="homepagesaeule2subline" type="text_area" colspan="8">
+                    <meta>
+                        <title>Subline Säule 2</title>
+                    </meta>
+                </property>
+                <property name="homepagesaeule3header" type="text_line" colspan="4">
+                    <meta>
+                        <title>Header Säule 3</title>
+                    </meta>
+                </property>
+                <property name="homepagesaeule3subline" type="text_area" colspan="8">
+                    <meta>
+                        <title>Subline Säule 3</title>
+                    </meta>
+                </property>
+                <property name="homepagesaeule4header" type="text_line" colspan="4">
+                    <meta>
+                        <title>Header Säule 4</title>
+                    </meta>
+                </property>
+                <property name="homepagesaeule4subline" type="text_area" colspan="8">
+                    <meta>
+                        <title>Subline Säule 4</title>
+                    </meta>
+                </property>
+            </properties>
+        </section>
     </properties>
 </template>

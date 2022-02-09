@@ -1,0 +1,43 @@
+{% extends "basediebasiscms.html.twig" %}
+
+{% block content %}
+  
+<body>
+    <section id="systemisches-konsensieren" class="systemisches-konsensieren">
+        <div class="header-top">
+            <h1 class="has-text-align-center"><strong>{{ content.title }}</strong></h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="p-fett">
+                        {{ content.konsensierensubline|raw }}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="p-maintext">
+                        
+                        {{ content.artikelleft|raw }}
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-maintext">
+                        
+                        {{ content.artikelright|raw }}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="p-maintext">
+                        {{ content.artikelfoot|raw }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+    
+{% endblock %}
