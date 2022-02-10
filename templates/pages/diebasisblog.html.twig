@@ -1,0 +1,29 @@
+{% extends "basediebasiscms.html.twig" %}
+{% block content %}
+	<body>
+		<div class="container mt-4">
+			<div class="row" style="color: #2098d1;">
+				<div class="col">
+					{% for blog in content.blog|sort((a,b) => a.blogdatum <= b.blogdatum) %}
+						<div>
+							<div class="post-preview">
+
+								<h2 class="post-title">{{ blog.blogtext }}</h2>
+
+								<p class="post-meta">Posted by&nbsp;<a href="#">{{ blog.single }}
+										on
+										{{ blog.blogdatum|date("d.m.Y") }}</a>
+								</p>
+								<div class="blogtext">
+									{{ blog.blogartikel|raw }}
+								</div>
+							</div>
+							<hr>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+		{{ dump(content) }}
+	</body>
+{% endblock %}
