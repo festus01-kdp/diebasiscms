@@ -47,6 +47,90 @@
             </meta>
         </property>
 
+         <section name="images">
+            <meta>
+                <title>Bilder</title>
+            </meta>
+            <properties>
+                <property name="homepagenavimage" type="single_media_selection" colspan="6">
+                    <meta>
+                        <title>Image Navbar</title>
+                    </meta>    
+                </property>
+                <property name="homepageheaderimage" type="single_media_selection" colspan="6"> 
+                    <meta>
+                        <title>Image Header</title>
+                    </meta>
+                </property>
+            </properties>
+        </section>  
+
+        <section name="sectionhomepagebilderteam">
+            <meta>
+                <title>Bilder Team</title>
+            </meta>
+            <properties>
+                <block name="blockhomepagebilderteam" default-type="single_media_selection">
+                    <meta>
+                        <title>Bilder</title>
+                    </meta>
+                    <types>
+                        <type name="single_media_selection">
+                            <properties>
+                                <property name="teambild" type="single_media_selection" colspan="5" mandatory="true">
+                                    <meta>
+                                        <title>Bild</title>
+                                    </meta>
+                                </property>
+
+                                <property name="teamhomepage" type="text_line" colspan="4">
+                                    <meta>
+                                        <title>Homepage</title>
+                                    </meta>
+                                </property>
+
+                                <property name="geschlecht" type="single_select" colspan="3" mandatory="true">
+                                    <meta>
+                                        <title>Geschlecht</title>
+                                    </meta>
+                                    <params>
+                                        <param name="values" type="collection">
+                                            <param name="male">
+                                                <meta>
+                                                    <title>Männlich</title>
+                                                </meta>
+                                            </param>
+                                            <param name="female">
+                                                <meta>
+                                                    <title>Weiblich</title>
+                                                </meta>
+                                            </param>
+                                        </param>
+                                    </params>
+                                </property>
+
+                                <property name="teamname" type="text_line" colspan="4" mandatory="true">
+                                    <meta>
+                                        <title>Name</title>
+                                    </meta>
+                                </property>
+                                <property name="teamfunktion" type="text_line" colspan="4">
+                                    <meta>
+                                        <title>Funktion</title>
+                                    </meta>
+                                </property>
+                                <property name="teamemail" type="email" colspan="4">
+                                    <meta>
+                                        <title>E-Mail</title>
+                                    </meta>
+                                </property>
+                            </properties>
+                        </type>
+                    </types>
+                </block>
+            </properties>
+        </section>
+
         <section name="homepagegruendungartikel">
             <meta>
                 <title>Subheader</title>

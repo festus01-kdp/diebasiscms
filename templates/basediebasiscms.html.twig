@@ -7,7 +7,7 @@
 		<meta property="og:url" content="https://www.diebasis-diepholz-nienburg.de">
 		<meta property="og:title" content="dieBasis">
 		<meta property="og:type" content="website">
-		<meta property="og:image" content="assets/img/LogoNavbar.png">
+		<meta property="og:image" content="/assets/img/LogoNavbar.png">
 		<meta name="description" content="Partei dieBasis Kreisverband Diepholz Nienburg">
 		{% block meta %}
 			{% include "@SuluWebsite/Extension/seo.html.twig" with {
@@ -40,7 +40,7 @@
 			<nav class="navbar navbar-light navbar-expand-md diebasis-navbar" style="background: rgba(240,236,227,0.49);">
 				<div class="container-fluid">
 					<a class="navbar-brand pt-0 pb-0" href="/">
-						<div><img src="/assets/img/dieBasis-LOGO-kv-diepholz-nienburg.svg" style="width: 150px;"></div>
+						<div><img src="{{ content.homepagenavimage.url }}" style="width: 150px;"></div>
 					</a>
 					<button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2">
 						<span class="visually-hidden">Toggle navigation</span>
@@ -73,14 +73,14 @@
 							<li class="nav-item dropdown">
 								<a class="nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#">AG's</a>
 								<div class="dropdown-menu dropdown-content dropdown-style">
-									<a class="dropdown-item" href="arbeitsgruppen.html#ag-frieden">Frieden</a>
-									<a class="dropdown-item" href="arbeitsgruppen.html#ag-presse">Presse</a>
-									<a class="dropdown-item" href="arbeitsgruppen.html#ag-selbstversorgung">Selbstversorgung</a>
-									<a class="dropdown-item" href="arbeitsgruppen.html#ag-bildung">Bildung</a>
-									<a class="dropdown-item" href="arbeitsgruppen.html#ag-it">IT</a>
-									<a class="dropdown-item" href="arbeitsgruppen.html#ag-konsensierung">Konsensierung</a>
-									<a class="dropdown-item" href="#">Meditation</a>
-									<a class="dropdown-item" href="arbeitsgruppen.html#ag-landtagswahl">Landtagswahl</a>
+									<a class="dropdown-item" href="arbeitsgruppen#ag-frieden">Frieden</a>
+									<a class="dropdown-item" href="arbeitsgruppen#ag-presse">Presse</a>
+									<a class="dropdown-item" href="arbeitsgruppen#ag-selbstversorgung">Selbstversorgung</a>
+									<a class="dropdown-item" href="arbeitsgruppen#ag-bildung">Bildung</a>
+									<a class="dropdown-item" href="arbeitsgruppen#ag-it">IT</a>
+									<a class="dropdown-item" href="arbeitsgruppen#ag-konsensierung">Konsensierung</a>
+									<a class="dropdown-item" href="arbeitsgruppen#ag-meditation">Meditation</a>
+									<a class="dropdown-item" href="arbeitsgruppen#ag-landtagswahl2022">Landtagswahl</a>
 								</div>
 							</li>
 							<li class="nav-item">

@@ -1,0 +1,33 @@
+{% extends "basediebasiscms.html.twig" %}
+
+{% block content %}
+	<body>
+		<div class="container pt-2">
+			<h1 class="text-center">Die Arbeitsgruppen der dieBasis</h1>
+
+			{% for item in content.arbeitsgruppe %}
+				<section {% if item.id %} id={{ item.id }} {% endif %} class="mb-3 section-arbeitsgruppe">
+					<div class="row">
+						<div class="col">
+							<h4>{{ item.text }}</h4>
+							<h5>{{ item.arbeitsgruppesubline }}</span>
+							{% if item.arbeitsgruppeemail %}
+								<a href="mailto:{{ item.arbeitsgruppeemail }}?subject=Anfrage&amp;body=Sehr geehrte Frau Gerstagen">&nbsp;<i class="fa fa-envelope"></i>
+								</a>
+							{% endif %}
+						</h5>
+						{{ include("includes/arbeitsgruppenartikel.html.twig", {item}) }}
+					</div>
+				</div>
+			</section>
+			<div class="text-center">
+				<hr class="hr-line">
+			</div>
+		{% endfor %}
+	</body>
+</div>
+<div>
+	<a class="back-to-top hvr-back-pulse" href="#">
+		<i class="fa fa-angle-up" style="color: rgb(37,178,231);"></i>
+	</a>
+</div></body>{{ dump(content) }}{% endblock %}
