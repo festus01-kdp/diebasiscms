@@ -1,24 +1,23 @@
 <?xml version="1.0" ?>
 <template xmlns="http://schemas.sulu.io/template/template"
-          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
 
-    <key>kontakt</key>
+    <key>impressum</key>
 
-    <view>pages/kontakt</view>
+    <view>pages/impressum</view>
     <controller>Sulu\Bundle\WebsiteBundle\Controller\DefaultController::indexAction</controller>
     <cacheLifetime>604800</cacheLifetime>
 
     <meta>
-        <title lang="en">Kontakt</title>
-        <title lang="de">Kontakt</title>
+        <title lang="en">Impressum</title>
+        <title lang="de">Impressum</title>
     </meta>
 
     <properties>
         <property name="title" type="text_line" mandatory="true">
             <meta>
-                <title lang="en">Header</title>
-                <title lang="de">Header</title>
+                <title lang="en">Title</title>
+                <title lang="de">Titel</title>
             </meta>
             <params>
                 <param name="headline" value="true"/>
@@ -36,5 +35,13 @@
             <tag name="sulu.rlp"/>
         </property>
 
+        <property name="impressumtext" type="text_editor">
+            <meta>
+                <title lang="en">Text</title>
+                <title lang="de">Text</title>
+            </meta>
+        </property>
+
     </properties>
+
 </template>

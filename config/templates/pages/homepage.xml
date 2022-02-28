@@ -37,29 +37,34 @@
 
         <property name="homepageheadline" type="text_line">
             <meta>
-                <title>Headline</title>
+                <title lang="en">Headline</title>
+                <title lang="de">Headline</title>
             </meta>
         </property>
 
         <property name="homepagesubline" type="text_line">
             <meta>
-                <title>Subline</title>
+                <title lang="en">Subline</title>
+                <title lang="de">Subline</title>
             </meta>
         </property>
 
          <section name="images">
             <meta>
-                <title>Bilder</title>
+                <title lang="en">Bilder</title>
+                <title lang="de">Bilder</title>
             </meta>
             <properties>
                 <property name="homepagenavimage" type="single_media_selection" colspan="6">
                     <meta>
-                        <title>Image Navbar</title>
+                        <title lang="en">Image Navbar</title>
+                        <title lang="de">Image Navbar</title>
                     </meta>    
                 </property>
                 <property name="homepageheaderimage" type="single_media_selection" colspan="6"> 
                     <meta>
-                        <title>Image Header</title>
+                        <title lang="en">Image Header</title>
+                        <title lang="de">Image Header</title>
                     </meta>
                 </property>
             </properties>
@@ -67,42 +72,49 @@
 
         <section name="sectionhomepagebilderteam">
             <meta>
-                <title>Bilder Team</title>
+                <title lang="en">Bilder Team</title>
+                <title lang="de">Bilder Team</title>
             </meta>
             <properties>
                 <block name="blockhomepagebilderteam" default-type="single_media_selection">
                     <meta>
-                        <title>Bilder</title>
+                        <title lang="en">Bilder</title>
+                        <title lang="de">Bilder</title>
                     </meta>
                     <types>
                         <type name="single_media_selection">
                             <properties>
                                 <property name="teambild" type="single_media_selection" colspan="5" mandatory="true">
                                     <meta>
-                                        <title>Bild</title>
+                                        <title lang="en">Bild</title>
+                                        <title lang="de">Bild</title>
                                     </meta>
                                 </property>
 
                                 <property name="teamhomepage" type="text_line" colspan="4">
                                     <meta>
-                                        <title>Homepage</title>
+                                        <title lang="en">Homepage</title>
+                                        <title lang="de">Homepage</title>
                                     </meta>
                                 </property>
 
                                 <property name="geschlecht" type="single_select" colspan="3" mandatory="true">
                                     <meta>
-                                        <title>Geschlecht</title>
+                                        <title lang="en">Geschlecht</title>
+                                        <title lang="de">Geschlecht</title> 
                                     </meta>
                                     <params>
                                         <param name="values" type="collection">
                                             <param name="male">
                                                 <meta>
-                                                    <title>Männlich</title>
+                                                    <title lang="en">Männlich</title>
+                                                    <title lang="de">Männlich</title>
                                                 </meta>
                                             </param>
                                             <param name="female">
                                                 <meta>
-                                                    <title>Weiblich</title>
+                                                    <title lang="en">Weiblich</title>
+                                                    <title lang="de">Weiblich</title>
                                                 </meta>
                                             </param>
                                         </param>
@@ -111,17 +123,20 @@
 
                                 <property name="teamname" type="text_line" colspan="4" mandatory="true">
                                     <meta>
-                                        <title>Name</title>
+                                        <title lang="en">Name</title>
+                                        <title lang="de">Name</title>
                                     </meta>
                                 </property>
                                 <property name="teamfunktion" type="text_line" colspan="4">
                                     <meta>
-                                        <title>Funktion</title>
+                                        <title lang="en">Funktion</title>
+                                        <title lang="de">Funktion</title>
                                     </meta>
                                 </property>
                                 <property name="teamemail" type="email" colspan="4">
                                     <meta>
-                                        <title>E-Mail</title>
+                                        <title lang="en">E-Mail</title>
+                                        <title lang="de">E-Mail</title>
                                     </meta>
                                 </property>
                             </properties>
@@ -133,18 +148,21 @@
 
         <section name="homepagegruendungartikel">
             <meta>
-                <title>Subheader</title>
+                <title lang="en">Subheader</title>
+                <title lang="de">Subheader</title>
             </meta>
             <properties>
                 <property name="homepagegruendungheadline" type="text_line">
                     <meta>
-                        <title>Artikel 1</title>
+                        <title lang="en">Artikel 1</title>
+                        <title lang="de">Artikel 1</title>
                     </meta>
                 </property>
 
                 <property name="homepagegruendungsubline" type="text_editor">
                     <meta>
-                        <title>Subline 1</title>
+                        <title lang="en">Subline 1</title>
+                        <title lang="de">Subline 1</title>
                     </meta>
                 </property>
             </properties>
@@ -152,17 +170,20 @@
 
         <section name="homepageueberuns">
             <meta>
-                <title>Über uns</title>
+                <title lang="en">Über uns</title>
+                <title lang="de">Über uns</title>
             </meta>
             <properties>
                 <property name="hoepageueberunsheadline" type="text_line">
                     <meta>
-                        <title>Headline</title>
+                        <title lang="en">Headline</title>
+                        <title lang="de">Headline</title>
                     </meta>
                 </property>
                 <property name="homepageueberunssubline" type="text_editor">
                     <meta>
-                        <title>Subline</title>
+                        <title lang="en">Subline</title>
+                        <title lang="de">Subline</title>
                     </meta>
                 </property>
             </properties>
@@ -170,47 +191,56 @@
 
         <section name="homepagesaeulen">
             <meta>
-                <title>Säulen</title>
+                <title lang="en">Säulen</title>
+                <title lang="de">Säulen</title>
             </meta>
             <properties>
                 <property name="homepagesaeule1header" type="text_line" colspan="4">
                     <meta>
-                        <title>Header Säule 1</title>
+                        <title lang="en">Header Säule 1</title>
+                        <title lang="de">Header Säule 1</title>
                     </meta>
                 </property>
                 <property name="homepagesaeule1subline" type="text_area" colspan="8">
                     <meta>
-                        <title>Subline Säule 1</title>
+                        <title lang="en">Subline Säule 1</title>
+                        <title lang="de">Subline Säule 1</title>
                     </meta>
                 </property>
                 <property name="homepagesaeule2header" type="text_line" colspan="4">
                     <meta>
-                        <title>Header Säule 2</title>
+                        <title lang="en">Header Säule 2</title>
+                        <title lang="de">Header Säule 2</title>
                     </meta>
                 </property>
                 <property name="homepagesaeule2subline" type="text_area" colspan="8">
                     <meta>
-                        <title>Subline Säule 2</title>
+                        <title lang="en">Subline Säule 2</title>
+                        <title lang="de">Subline Säule 2</title>
                     </meta>
                 </property>
                 <property name="homepagesaeule3header" type="text_line" colspan="4">
                     <meta>
-                        <title>Header Säule 3</title>
+                        <title lang="en">Header Säule 3</title>
+                        <title lang="de">Header Säule 3</title>
                     </meta>
                 </property>
                 <property name="homepagesaeule3subline" type="text_area" colspan="8">
                     <meta>
-                        <title>Subline Säule 3</title>
+                        <title lang="en">Subline Säule 3</title>
+                        <title lang="de">Subline Säule 3</title>
                     </meta>
                 </property>
                 <property name="homepagesaeule4header" type="text_line" colspan="4">
                     <meta>
-                        <title>Header Säule 4</title>
+                        <title lang="en">Header Säule 4</title>
+                        <title lang="de">Header Säule 4</title>
                     </meta>
                 </property>
                 <property name="homepagesaeule4subline" type="text_area" colspan="8">
                     <meta>
-                        <title>Subline Säule 4</title>
+                        <title lang="en">Subline Säule 4</title>
+                        <title lang="de">Subline Säule 4</title>
                     </meta>
                 </property>
             </properties>

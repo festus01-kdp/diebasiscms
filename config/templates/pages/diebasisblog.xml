@@ -9,14 +9,15 @@
     <cacheLifetime>604800</cacheLifetime>
 
     <meta>
-        <title>dieBasis BLOG</title>
-
+        <title lang="en">dieBasis BLOG</title>
+        <title lang="de">dieBasis BLOG</title>
     </meta>
 
     <properties>
         <property name="title" type="text_line" mandatory="true">
             <meta>
-                <title>Title</title>
+                <title lang="en">Title</title>
+                <title lang="de">Title</title>
             </meta>
             <params>
                 <param name="headline" value="true"/>
@@ -26,32 +27,37 @@
 
         <property name="url" type="resource_locator" mandatory="true">
             <meta>
-                <title>Resourcelocator</title>
+                <title lang="en">Resourcelocator</title>
+                <title lang="de">Resourcelocator</title>
             </meta>
             <tag name="sulu.rlp"/>
         </property>
 
         <section name="blogeintrag">
             <meta>
-                <title>BLOG-Eintrag</title>
+                <title lang="en">BLOG-Eintrag</title>
+                <title lang="en">BLOG-Eintrag</title>
             </meta>
             <properties>
                 <block name="blog" default-type="blogtext">
                     <meta>
-                        <title>BLOG-Eintrag</title>
+                        <title lang="en">BLOG-Eintrag</title>
+                        <title lang="en">BLOG-Eintrag</title>
                     </meta>
                     <types>
                         <type name="blogtext">
                             <properties>
                                 <property name="blogtext" type="text_line" colspan="4" mandatory="true">
                                     <meta>
-                                        <title>Headline</title>
+                                        <title lang="en">Headline</title>
+                                        <title lang="de">Headline</title>
                                     </meta>
                                 </property>
 
                                 <property name="single" type="single_select" colspan="4" mandatory="true">
                                     <meta>
-                                        <title>Posted by</title>
+                                        <title lang="en">Posted by</title>
+                                        <title lang="de">Posted by</title>
                                     </meta>
 
                                     <params>
@@ -65,12 +71,14 @@
                                             </param>
                                             <param name="Anselm Althöfer">
                                                 <meta>
-                                                    <title>Anselm Althöfer</title>
+                                                    <title lang="en">Anselm Althöfer</title>
+                                                    <title lang="de">Anselm Althöfer</title>
                                                 </meta>
                                             </param>
                                             <param name="Klaus-Dieter Pernak">
                                                 <meta>
-                                                    <title>Klaus-Dieter</title>
+                                                    <title lang="en">Klaus-Dieter</title>
+                                                    <title lang="de">Klaus-Dieter</title>
                                                 </meta>
                                             </param>
                                         </param>
@@ -79,12 +87,14 @@
 
                                 <property name="blogdatum" type="date" colspan="4" mandatory="true">
                                     <meta>
-                                        <title>Datum</title>
+                                        <title lang="en">Datum</title>
+                                        <title lang="de">Datum</title>
                                     </meta>
                                 </property>
                                 <property name="blogartikel" type="text_editor" mandatory="true">
                                     <meta>
-                                        <title>Artikel</title>
+                                        <title lang="en">Artikel</title>
+                                        <title lang="en">Artikel</title>
                                     </meta>
                                 </property>
                             </properties>

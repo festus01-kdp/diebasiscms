@@ -1,0 +1,72 @@
+{% extends "basediebasiscms.html.twig" %}
+
+{% block content %}
+	<body>
+		<section class="mt-4">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div>
+							<div class="headline">
+								<h2 class="text-center">{{ content.warumdiebasisheadline }}</h2>
+							</div>
+							<div class="mb-4 mt-4">
+								<div>
+									<h4 class="has-text-align-center mb-3">{{ content.warumdiebasissubline }}
+									</h4>
+									<h4 class="has-text-align-center mt-3">{{ content.warumdiebasissubsubline }}
+									</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="container-fluid mb-4">
+				<div class="row ms-2 me-2">
+					<div class="col-sm-12 col-lg-6 me-2">
+						<div class="row">
+							{# linke Spalte #}
+							{% for artikel in content.sectionwarumdiebasisblock %}
+								{% if artikel.artikelalign == "l" %}
+									<div class="col artikel-image artikel col-12 ms-2 ps-2 pe-2 mb-3">
+										<p class="mb-0 artikel-headline">Geschrieben von:
+											{{ artikel.geschriebenvon }}</p>
+										<p class="artikel-subline">{{ artikel.geschriebenam|date("d. F Y") }}</p>
+										<div>
+											{{ artikel.text|raw }}
+										</div>
+									</div>
+								{% endif %}
+							{% endfor %}
+						</div>
+					</div>
+					<div class="col ms-2">
+						<div class="row">
+							{# rechte Spalte #}
+							{% for artikel in content.sectionwarumdiebasisblock %}
+								{% if artikel.artikelalign == "r" %}
+									<div class="col artikel-image artikel ms-2 ps-2 pe-2 col-12 mb-3">
+										<p class="mb-0 artikel-headline">Geschrieben von: {{ artikel.geschriebenvon }}</p>
+										<p class="artikel-subline">{{ artikel.geschriebenam|date("d. F Y") }}</p>
+										<div>
+											{{ artikel.text|raw }}
+										</div>
+									</div>
+								{% endif %}
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div>
+			<a class="back-to-top hvr-back-pulse" href="#">
+				<i class="fa fa-angle-up" style="color: rgb(37,178,231);"></i>
+			</a>
+		</div>
+
+	</body>
+{% endblock %}

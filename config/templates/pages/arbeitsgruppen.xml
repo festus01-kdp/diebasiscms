@@ -9,13 +9,15 @@
     <cacheLifetime>604800</cacheLifetime>
 
     <meta>
-        <title>Arbeitsgruppen</title>
+        <title lang="en">Arbeitsgruppen</title>
+        <title lang="de">Arbeitsgruppen</title>
     </meta>
 
     <properties>
         <property name="title" type="text_line" mandatory="true">
             <meta>
-                <title>Title</title>
+                <title lang="en">Title</title>
+                <title lang="de">Title</title>
             </meta>
             <params>
                 <param name="headline" value="true"/>
@@ -33,62 +35,94 @@
             <tag name="sulu.rlp"/>
         </property>
 
-
         <block name="arbeitsgruppe" default-type="text">
             <meta>
-                <title>AG dieBasis</title>
+                <title lang="en">AG dieBasis</title>
+                <title lang="de">AG dieBasis</title>
             </meta>
             <types>
                 <type name="text">
                     <properties>
                         <property name="text" type="text_line" colspan="8">
                             <meta>
-                                <title>Headline</title>
+                                <title lang="en">Headline</title>
+                                <title lang="de">Headline</title>
                             </meta>
                         </property>
-                        <property name="id" type="text_line" colspan="4">
+                        <property name="id" type="text_line" mandatory="true" colspan="4">
                             <meta>
-                                <title>ID HTML</title>
+                                <title lang="en">ID HTML</title>
+                                <title lang="de">ID HTML</title>
+                            </meta>
+                        </property>
+                        <property name="arbeitsgruppeanrede" type="single_select" colspan="3">
+                            <meta>
+                                <title lang="en">Anrede</title>
+                                <title lang="de">Anrede</title>
+                            </meta>
+                            <params>
+                                <param name="values" type="collection">
+                                    <param name="herr">
+                                        <meta>
+                                            <title lang="en">Herr</title>
+                                            <title lang="de">Herr</title>
+                                        </meta>
+                                    </param>
+                                    <param name="frau">
+                                        <meta>
+                                            <title lang="en">Frau</title>
+                                            <title lang="de">Frau</title>
+                                        </meta>
+                                    </param>
+                                </param>
+                            </params>
+                        </property>
+                        <property name="arbeitsgruppevorname" type="text_line" colspan="4">
+                            <meta>
+                                <title lang="en">Vorname</title>
+                                <title lang="de">Vorname</title>
+                            </meta>
+                        </property>
+                        <property name="arbeitsgruppenachname" type="text_line"  colspan="5">
+                            <meta>
+                                <title lang="en">Nachname</title>
+                                <title lang="de">Nachname</title>
                             </meta>
                         </property>
                         <property name="arbeitsgruppesubline" type="text_line" colspan="6">
                             <meta>
-                                <title>Subline</title>
+                                <title lang="en">Subline</title>
+                                <title lang="de">Subline</title>
                             </meta>
                         </property>
                         <property name="arbeitsgruppeemail" type="text_line" colspan="6">
                             <meta>
-                                <title>E-Mail</title>
+                                <title lang="en">E-Mail</title>
+                                <title lang="en">E-Mail</title>
                             </meta>
                         </property>
                         <block name="arbeitgruppeinhalt" default-type="text">
                             <meta>
-                                <title>AG-Artikel</title>
+                                <title lang="en">AG-Artikel</title>
+                                <title lang="en">AG-Artikel</title>
                             </meta>
                             <types>
                                 <type name="text">
-                                    
+
                                     <properties>
                                         <property name="arbeitsgruppetext" type="text_editor">
                                             <meta>
-                                                <title>Arbeitsgruppe Artikel</title>
+                                                <title lang="en">Arbeitsgruppe Artikel</title>
+                                                <title lang="de">Arbeitsgruppe Artikel</title>
                                             </meta>
                                         </property>
                                     </properties>
-
                                 </type>
-
                             </types>
-
                         </block>
-
                     </properties>
-
                 </type>
-
             </types>
-
         </block>
-
     </properties>
 </template>

@@ -1,0 +1,17 @@
+{% extends "basediebasiscms.html.twig" %}
+
+{% block content %}
+	<body style="background: #fffdf7;">
+		<div class="container">
+			<h1 class="text-center mt-2">
+				<strong>{{ content.title }}</strong>
+			</h1>
+			{{ content.impressumtext|raw }}
+		</div>
+		<div>
+			<a class="back-to-top hvr-back-pulse" href="#">
+				<i class="fa fa-angle-up" style="color: rgb(37,178,231);"></i>
+			</a>
+		</div>
+	</body>
+{% endblock %}

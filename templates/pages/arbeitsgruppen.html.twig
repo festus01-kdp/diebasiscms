@@ -5,13 +5,29 @@
 			<h1 class="text-center">Die Arbeitsgruppen der dieBasis</h1>
 
 			{% for item in content.arbeitsgruppe %}
-				<section {% if item.id %} id={{ item.id }} {% endif %} class="mb-3 section-arbeitsgruppe">
+				<section id={{ item.id }} class="mb-3 section-arbeitsgruppe">
 					<div class="row">
 						<div class="col">
 							<h4>{{ item.text }}</h4>
-							<h5>{{ item.arbeitsgruppesubline }}</span>
+							<h5>{{ item.arbeitsgruppesubline }}
+								{{ item.arbeitsgruppevorname }}
+								{{ item.arbeitsgruppenachname }}</span>
+
 							{% if item.arbeitsgruppeemail %}
-								<a href="mailto:{{ item.arbeitsgruppeemail }}?subject=Anfrage&amp;body=Sehr geehrte Frau Gerstagen">&nbsp;<i class="fa fa-envelope"></i>
+								{% set isemail = true %}
+
+							{% else %}
+								{% set isemail = false %}
+
+							{% endif %}
+
+							{% if item.arbeitsgruppeanrede == "frau" and isemail %}
+								{% set anrede = "Sehr geehrte Frau %s" | format(item.arbeitsgruppenachname)  %}
+							{% else %}
+								{% set anrede = "Sehr geehrter Herr %s" | format(item.arbeitsgruppenachname) %}
+							{% endif %}
+							{% if isemail %}
+								<a href="mailto:{{ item.arbeitsgruppeemail }}?subject=Anfrage&amp;body={{ anrede }}">&nbsp;<i class="fa fa-envelope"></i>
 								</a>
 							{% endif %}
 						</h5>
@@ -23,10 +39,10 @@
 				<hr class="hr-line">
 			</div>
 		{% endfor %}
+		<div>
+			<a class="back-to-top hvr-back-pulse" href="#">
+				<i class="fa fa-angle-up" style="color: rgb(37,178,231);"></i>
+			</a>
+		</div>
 	</body>
-</div>
-<div>
-	<a class="back-to-top hvr-back-pulse" href="#">
-		<i class="fa fa-angle-up" style="color: rgb(37,178,231);"></i>
-	</a>
-</div></body>{{ dump(content) }}{% endblock %}
+{% endblock %}

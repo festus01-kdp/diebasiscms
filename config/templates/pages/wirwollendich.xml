@@ -9,13 +9,15 @@
     <cacheLifetime>604800</cacheLifetime>
 
     <meta>
-        <title>Wir wollen Dich</title>
+        <title lang="en">Wir wollen Dich</title>
+        <title lang="de">Wir wollen Dich</title>
     </meta>
 
     <properties>
         <property name="title" type="text_line" mandatory="true">
             <meta>
-                <title>Title</title>
+                <title lang="en">Title</title>
+                <title lang="de">Title</title>
             </meta>
             <params>
                 <param name="headline" value="true"/>
@@ -34,59 +36,70 @@
         </property>
         <property name="wirwollendichheadlinelinks" type="text_line" colspan="6">
             <meta>
-                <title>Headline links</title>
+                <title lang="en">Headline links</title>
+                <title lang="de">Headline links</title>
             </meta>
         </property>
         <property name="wirwollendichheadlinerechts" type="text_line" colspan="6">
             <meta>
-                <title>Headline rechts</title>
+                <title lang="en">Headline rechts</title>
+                <title lang="de">Headline rechts</title>
             </meta>
         </property>
         <property name="wirwollendichsublinelinks" type="text_line" colspan="6">
             <meta>
-                <title>Subline links</title>
+                <title lang="en">Subline links</title>
+                <title lang="de">Subline links</title>
             </meta>
         </property>
         <property name="wirwollendichsublinerechts" type="text_line" colspan="6">
             <meta>
-                <title>Subline rechts</title>
+                <title lang="en">Subline rechts</title>
+                <title lang="de">Subline rechts</title>
             </meta>
         </property>
         
 
         <section name="spaltelinksrechts">
             <meta>
-                <title>Spalten links/rechts</title>
+                <title lang="en">Spalten links/rechts</title>
+                <title lang="de">Spalten links/rechts</title>
             </meta>
             <properties>
                 <block name="spaltelinksrechts" default-type="text">
                     <meta>
-                        <title>Spalten</title>
+                        <title lang="en">Spalten</title>
+                        <title lang="de">Spalten</title>
                     </meta>
                     <types>
                         <type name="text">
                             <meta>
-                                <title>Text</title>
+                                <title lang="en">Text</title>
+                                <title lang="de">Text</title>
                             </meta>
                             <properties>
                                 <property name="headerlinelinks" type="text_line" colspan="6">
                                     <meta>
-                                        <title>Headerline links</title>
+                                        <title lang="en">Headerline links</title>
+                                        <title lang="de">Headerline links</title>
                                     </meta>
                                 </property>
                                 <property name="headerlinerechts" type="text_line" colspan="6">
                                     <meta>
-                                        <title>Headerline rechts</title>
+                                        <title lang="en">Headerline rechts</title>
+                                        <title lang="de">Headerline rechts</title>
                                     </meta>
                                 </property>
                                 <property name="artikellinelinks" type="text_editor" colspan="6">
                                     <meta>
-                                        <title>Artikelline links</title>
+                                        <title lang="en">Artikelline links</title>
+                                        <title lang="de">Artikelline links</title>
                                     </meta>
                                 </property>
                                 <property name="artikellinerechts" type="text_editor" colspan="6">
                                     <meta>
-                                        <title>Artikelline rechts</title>
+                                        <title lang="en">Artikelline rechts</title>
+                                        <title lang="de">Artikelline rechts</title>
                                     </meta>
                                 </property>
                             </properties>

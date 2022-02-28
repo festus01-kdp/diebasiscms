@@ -294,7 +294,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  font-family: 'Open Sans',sans-serif;
+  font-family: 'Open Sans';
   color: #4a4949;
   font-weight: 400;
 }
@@ -522,5 +522,49 @@ body {
 
 .blogtext {
   color: #4a4949;
+}
+
+.headline > h2 {
+  border: 4px solid #e3e4e4;
+  padding: 10px 10px;
+}
+
+.block-column-10 {
+  flex-basis: 10%;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.artikel-image .image-fload-left {
+  float: left;
+  margin: 10px;
+}
+
+.artikel-image .artikel-text {
+  text-align: justify;
+}
+
+.artikel-subline {
+  font-size: 14px;
+}
+
+.artikel-headline {
+  font-family: 'Open Sans SemiBold';
+}
+
+.artikel {
+  box-shadow: 0px 2px 15px #bebebe;
+}
+
+.diebasis-navbar {
+  background: rgba(240,236,227,0.49);
+}
+
+@media (min-width: 768px) {
+  .diebasis-navbar {
+    padding-right: 90px;
+  }
 }
 

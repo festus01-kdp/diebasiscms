@@ -4,12 +4,13 @@
           xsi:schemaLocation="http://schemas.sulu.io/webspace/webspace http://schemas.sulu.io/webspace/webspace-1.1.xsd">
     <!-- See: http://docs.sulu.io/en/latest/book/webspaces.html how to configure your webspace-->
 
-    <name>dieBasis CMS</name>
+    <name>dieBasis-diepholz-nienburg.de</name>
     <key>diebasiscms</key>
 
     <localizations>
         <!-- See: http://docs.sulu.io/en/latest/book/localization.html how to add new localizations -->
-        <localization language="en" default="true"/>
+        <localization language="en" default="false"/>
+        <localization language="de" default="true"/>
     </localizations>
 
     <default-templates>

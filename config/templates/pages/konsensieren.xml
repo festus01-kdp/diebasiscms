@@ -10,13 +10,15 @@
     <cacheLifetime>604800</cacheLifetime>
 
     <meta>
-        <title>Systemisches Konsensieren</title>
+        <title lang="en">Systemisches Konsensieren</title>
+        <title lang="de">Systemisches Konsensieren</title>
     </meta>
 
     <properties>
         <property name="title" type="text_line" mandatory="true">
             <meta>
-                <title>Headline</title>
+                <title lang="en">Headline</title>
+                <title lang="de">Headline</title>
             </meta>
             <params>
                 <param name="konsensierenheadline" value="true"/>
@@ -36,25 +38,29 @@
 
         <property name="konsensierensubline" type="text_editor">
             <meta>
-                <title>Subline</title>
+                <title lang="en">Subline</title>
+                <title lang="de">Subline</title>
             </meta>
         </property>
 
         <property name="artikelleft" type="text_editor">
             <meta>
-                <title>Artikel links</title>
+                <title lang="en">Artikel links</title>
+                <title lang="de">Artikel links</title>
             </meta>
         </property>
 
         <property name="artikelright" type="text_editor">
             <meta>
-                <title>Artikel rechts</title>
+                <title lang="en">Artikel rechts</title>
+                <title lang="de">Artikel rechts</title>
             </meta>
         </property>
 
         <property name="artikelfoot" type="text_editor">
             <meta>
-                <title>Artikel Footer</title>
+                <title lang="en">Artikel Footer</title>
+                <title lang="de">Artikel Footer</title>
             </meta>
         </property>
 

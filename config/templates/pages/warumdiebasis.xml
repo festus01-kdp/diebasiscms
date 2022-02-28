@@ -1,0 +1,120 @@
+<?xml version="1.0" ?>
+<template xmlns="http://schemas.sulu.io/template/template"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+
+    <key>warumdiebasis</key>
+
+    <view>pages/warumdiebasis</view>
+    <controller>Sulu\Bundle\WebsiteBundle\Controller\DefaultController::indexAction</controller>
+    <cacheLifetime>604800</cacheLifetime>
+
+    <meta>
+        <title lang="en">Warum dieBasis</title>
+        <title lang="de">Warum dieBasis</title>
+    </meta>
+
+    <properties>
+        <property name="title" type="text_line" mandatory="true">
+            <meta>
+                <title lang="en">Title</title>
+                <title lang="de">Titel</title>
+            </meta>
+            <params>
+                <param name="headline" value="true"/>
+            </params>
+
+            <tag name="sulu.rlp.part"/>
+        </property>
+
+        <property name="url" type="resource_locator" mandatory="true">
+            <meta>
+                <title lang="en">Resourcelocator</title>
+                <title lang="de">Adresse</title>
+            </meta>
+
+            <tag name="sulu.rlp"/>
+        </property>
+
+        <property name="warumdiebasisheadline" type="text_line">
+            <meta>
+                <title lang="en">Headline</title>
+                <title lang="de">Headline</title>
+            </meta>
+        </property>
+
+        <property name="warumdiebasissubline" type="text_line">
+            <meta>
+                <title lang="en">Subline</title>
+                <title lang="de">Subline</title>
+            </meta>
+        </property>
+        <property name="warumdiebasissubsubline" type="text_line">
+            <meta>
+                <title lang="en">Sub-Subline</title>
+                <title lang="de">Sub-Subline</title>
+            </meta>
+        </property>
+
+        <section name="sectionwarumdiebasisartikel">
+            <meta>
+                <title lang="en">Artikel</title>
+                <title lang="de">Artikel</title>
+            </meta>
+            <properties>
+                <block name="sectionwarumdiebasisblock" default-type="text">
+                    <meta>
+                        <title lang="en">Meine Beweggründe</title>
+                        <title lang="de">Meine Beweggründe</title>
+                    </meta>
+                    <types>
+                        <type name="text">
+                            <properties>
+                                <property name="geschriebenvon" type="text_line" colspan="6">
+                                    <meta>
+                                        <title lang="en">Geschrieben von</title>
+                                        <title lang="de">Geschrieben von</title>
+                                    </meta>
+                                </property>
+                                <property name="geschriebenam" type="date" colspan="3">
+                                    <meta>
+                                        <title lang="en">am</title>
+                                        <title lang="de">am</title>
+                                    </meta>
+                                </property>
+                                <property name="artikelalign" type="single_select" colspan="3" mandatory="true">
+                                    <meta>
+                                        <title lang="en">Artikel erscheint</title>
+                                        <title lang="de">Artikel erscheint</title>
+                                    </meta>
+                                    <params>
+                                        <param name="default_value" value="links"/>
+                                        <param name="values" type="collection">
+                                            <param name="l">
+                                                <meta>
+                                                    <title lang="en">Links</title>
+                                                    <title lang="de">Links</title>
+                                            </meta>
+                                            </param>
+                                            <param name="r">
+                                                <meta>
+                                                    <title lang="en">Rechts</title>
+                                                    <title lang="de">Rechts</title>
+                                                </meta>
+                                            </param>
+                                        </param>
+                                    </params>
+                                </property>
+                                <property name="text" type="text_editor">
+                                    <meta>
+                                        <title lang="en">Text</title>
+                                        <title lang="de">Text</title>
+                                    </meta>
+                                </property>
+                            </properties>
+                        </type>
+                    </types>
+                </block>
+            </properties>
+        </section>
+    </properties>
+</template>
