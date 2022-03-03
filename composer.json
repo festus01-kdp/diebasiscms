@@ -60,8 +60,7 @@
     "autoload": {
         "psr-4": {
             "App\\": "src/"
-        },
-        "files": ["vendor/twig/twig/src/kdpfunctions.php"]
+        }
     },
     "autoload-dev": {
         "psr-4": {
