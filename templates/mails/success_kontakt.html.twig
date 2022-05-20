@@ -24,9 +24,7 @@
                 <p>Mit friedlichen Grüßen</p>
             {% endif %}
 
-            <img src="{{ absolute_url('assets/img/emaifooter-120.svg') }}" style="width: 120px">
-            {# kleiner Trick, sonst wird image nicht in e-mail angezeigt #}
-            <p style="display: none">-</p>
+            <img src="{{ absolute_url(asset('/assets/img/emaifooter-120.svg')) }}" alt="Logo dieBasis" style="width: 120px">
 
         </div>
     </div>
