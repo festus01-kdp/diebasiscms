@@ -400,6 +400,19 @@
     "sebastian/version": {
         "version": "3.0.2"
     },
+    "sulu/form-bundle": {
+        "version": "2.4",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "2.2",
+            "ref": "c796a47172945ba685c9d463407305ea1d4cc166"
+        },
+        "files": [
+            "config/packages/sulu_form.yaml",
+            "config/routes/sulu_form_admin.yaml"
+        ]
+    },
     "sulu/sulu": {
         "version": "2.4.0"
     },
@@ -549,6 +562,18 @@
         },
         "files": [
             "config/packages/lock.yaml"
+        ]
+    },
+    "symfony/mailer": {
+        "version": "5.4",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "4.3",
+            "ref": "97a61eabb351d7f6cb7702039bcfe07fe9d7e03c"
+        },
+        "files": [
+            "config/packages/mailer.yaml"
         ]
     },
     "symfony/mime": {

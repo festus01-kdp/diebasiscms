@@ -4,73 +4,104 @@
 
     {% if content.form %}
         {% if app.request.get('send') != 'true' %}
+
+            {% if content.headlineheader %}
+                <div class="container w-50 mt-5 mb-5">
+                    <div class="row">
+                        <div class="col">
+                            <{{ content.headlineheadersize }}>
+                            {{ content.headlineheader }}
+                        </{{ content.headlineheadersize }}>
+                    </div>
+                </div>
+                {% if content.sublineheader %}
+                    <div class="row">
+                        <div class="col">
+                            <{{ content.sublineheadersize }}>
+                            {{ content.sublineheader }}
+                        </{{ content.sublineheadersize }}>
+                    </div>
+                    </div>
+                {% endif %}
+                {% if content.textheader %}
+                    <div class="row {{ content.margintopheader }} {{ content.marginbuttomheader }}">
+                        <div class="col">
+                            {{ content.textheader|raw }}
+                        </div>
+                    </div>
+                {% endif %}
+                </div>
+            {% endif %}
+
             {# FORM THEME #}
             {% form_theme content.form '@SuluForm/themes/basic.html.twig' %}
+
             {{ form_start(content.form) }}
-            <div class="container w-50 mt-5 kontakt-background">
-                <div class="row pt-4">
+            <div class="container w-50 mt-5 mb-5 kontakt-background">
+                <div class="row pt-4 pb-4">
                     <div class="col">
                         <h4>{{ content.title }}</h4>
                     </div>
+                </div>
+                {% set submit = null %}
+                {% for formfeld in content.form.children %}
+                    {% if formfeld.vars['label'] != null %}
 
-                </div>
-                <div class="row mt-4">
-                    <div class="col col-3">
-                        <p>{{ form_label(content.form.children['dropdown']) }}</p>
+                        {% if formfeld.vars['name'] == 'submit' %}
+                            {% set submit = content.form.children['submit'] %}
+                        {% endif %}
+                        {% if submit == null %}
+                            <div class="row">
+                                <div class="col col-3">
+                                    <p>{{ form_label(content.form.children[formfeld.vars['name']]) }}</p>
+                                </div>
+                                <div class="col">
+                                    {{ form_widget(content.form.children[formfeld.vars['name']], {'attr': {'class': 'col-9'}}) }}
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+                {# Submit button separat rendern #}
+                {% if submit != null %}
+                    <div class="row mb-4 pb-4">
+                        <div class="col offset-3 mt-4">
+                            {{ form_widget(content.form.children['submit'], {'attr': {'class': 'btn btn-primary btn-sm'}}) }}
+                        </div>
                     </div>
-                    <div class="col">
-                        {{ form_widget(content.form.children['dropdown'], {'attr': {'class': 'col-9'}}) }}
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col col-3">
-                        <p>{{ form_label(content.form.children['firstName']) }}</p>
-                    </div>
-                    <div class="col">
-                        {{ form_widget(content.form.children['firstName'], {'attr': {'class': 'col-9'}}) }}
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col col-3">
-                        <p>{{ form_label(content.form.children['lastName']) }}</p>
-                    </div>
-                    <div class="col">
-                        {{ form_widget(content.form.children['lastName'], {'attr': {'class': 'col-9'}}) }}
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col col-3">
-                        <p>{{ form_label(content.form.children['phone']) }}</p>
-                    </div>
-                    <div class="col">
-                        {{ form_widget(content.form.children['phone'], {'attr': {'class': 'col-9'}}) }}
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col col-3">
-                        <p>{{ form_label(content.form.children['email']) }}</p>
-                    </div>
-                    <div class="col">
-                        {{ form_widget(content.form.children['email'], {'attr': {'class': 'col-9'}}) }}
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col col-3">
-                        <p>{{ form_label(content.form.children['textarea']) }}</p>
-                    </div>
-                    <div class="col">
-                        {{ form_widget(content.form.children['textarea'], {'attr': {'class': 'col-9', 'rows': '4'}}) }}
-                    </div>
-                </div>
-                <div class="row mb-4 pb-4">
-                    <div class="col offset-3 mt-4">
-                        {{ form_widget(content.form.children['submit'], {'attr': {'class': 'btn btn-primary btn-sm'}}) }}
-                    </div>
-                </div>
-
+                {% endif %}
             </div>
 
             {{ form_end(content.form) }}
+
+            {% if content.headlinefooter %}
+                <div class="container w-50 mt-5 mb-5">
+                    <div class="row">
+                        <div class="col">
+                            <{{ content.headlinefootersize }}>
+                                {{ content.headlinefooter }}
+                            </{{ content.headlinefootersize }}>
+                        </div>
+                    </div>
+
+                    {% if content.sublinefooter %}
+                        <div class="row">
+                            <div class="col">
+                                <{{ content.sublinefootersize }}>
+                                    {{ content.sublinefooter }}
+                                </{{ content.sublinefootersize }}>
+                            </div>
+                        </div>
+                        {% if content.textfooter %}
+                            <div class="row {{ content.margintopfooter }} {{ content.marginbuttomfooter }}">
+                                <div class="col">
+                                    {{ content.textfooter|raw }}
+                                </div>
+                            </div>
+                        {% endif %}
+                </div>
+                {% endif %}
+            {% endif %}
 
         {% else %}
             <div class="container w-50 h-50">
@@ -80,7 +111,7 @@
                     </div>
                 </div>
             </div>
-
         {% endif %}
     {% endif %}
+
 {% endblock %}

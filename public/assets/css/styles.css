@@ -33,7 +33,6 @@ h1, h2, h3, h4, h5, h6 {
   margin: auto;
   overflow: hidden;
   padding: 25px 20px;
-  max-width: 85%;
   font-size: 18px;
 }
 
@@ -42,6 +41,12 @@ h1, h2, h3, h4, h5, h6 {
 .text-trennung-auto {
   hyphens: auto;
   -webkit-hyphens: auto;
+}
+
+.text-saeulen {
+  color: var(--bs-light);
+  font-size: 18px;
+  text-align: left;
 }
 
 @media (max-width: 380px) {
@@ -616,4 +621,12 @@ img {
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 3;
+}
+
+.kontakt-background {
+  background-color: rgba(135, 196, 183, 0.27);
+}
+
+.section-navbar-fixed {
+  margin-bottom: 70px;
 }

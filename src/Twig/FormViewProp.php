@@ -2,12 +2,13 @@
 
 namespace App\Twig;
 
+use Symfony\Component\Form\FormView;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFilter;
 use Twig\TwigFunction;
 
-class FormatDatum2de extends AbstractExtension {
+class FormViewProp extends AbstractExtension {
 
     private $requestStack;
 
@@ -17,30 +18,19 @@ class FormatDatum2de extends AbstractExtension {
 
     public function getFilters(): array {
         return [
-            new TwigFilter('locale_date', [$this, 'localeDate']),
+            new TwigFilter('formview_prop', array($this, 'getFormViewProperty')),
         ];
     }
 
     public function getFunctions(): array {
         return [
-            new TwigFunction('locale_date', [$this, 'localeDate']),
+            new TwigFunction('formview_prop', [$this, 'getFormViewProperty']),
         ];
     }
 
-    public function localeDate(string $date, $format) {
-        // Formatiere Datum nur für Locale de-DE, damit Monat in Deutsch übersetzt wird
-        $fmt = new \IntlDateFormatter(
-            'de-DE',
-            \IntlDateFormatter::FULL,
-            \IntlDateFormatter::FULL,
-            'Europe/Berlin',
-            \IntlDateFormatter::GREGORIAN,
-            $format
-        );
-        // String in datetime konvertieren
-        $date = strtotime($date);
-
-        return $fmt->format($date);
+    public function getFormViewProperty(FormView $formView, string $prop) {
+        return $formView->{$prop};
     }
+
 
 }

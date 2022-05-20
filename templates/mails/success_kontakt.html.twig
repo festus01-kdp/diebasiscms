@@ -3,17 +3,35 @@
 <head>
     <title>E-Mail Formular</title>
 </head>
-<body>
-<h3>Vielen Dank</h3>
 
+<body>
+{% set firstName = null %}
+{% for field in formEntity.fields|default([]) -%}
+    {% if field.key == 'firstName' %}
+        {% set firstName = field.value %}
+    {% endif %}
+{% endfor %}
+
+<h3>Vielen Dank {{ firstName }}</h3>
+<br>
+<h4>Ich werde schnellstmögilich auf die Anfrage antworten</h4>
 <div class="container">
     <div class="row">
         <div class="col">
-            <p>Mit friedlichen Grüßen</p>
+            {% if formEntity['mailText'] %}
+                {{ formEntity['mailText']|raw }}
+            {% else %}
+                <p>Mit friedlichen Grüßen</p>
+            {% endif %}
+
             <img src="{{ absolute_url('assets/img/emaifooter-120.svg') }}" style="width: 120px">
-            <p>Oben sollte das Bild zu sehen sein</p>
+            {# kleiner Trick, sonst wird image nicht in e-mail angezeigt #}
+            <p style="display: none">-</p>
+
         </div>
     </div>
+
 </div>
+
 </body>
 </html>

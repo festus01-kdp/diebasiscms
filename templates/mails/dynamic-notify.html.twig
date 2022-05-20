@@ -1,7 +1,12 @@
-<h1>Notify Dynamic-Text</h1>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Basic Form</title>
+</head>
+<body>
+<h1>Nachricht aus Kontaktformular</h1>
 {% for field in formEntity.fields|default([]) -%}
     {%- set value = field.value -%}
-
     {# get formatted value. #}
     {%- if value is iterable -%}
         {%- if field.type == 'attachment' -%}
@@ -29,3 +34,5 @@
         <strong>{{ field.shortTitle|default(field.title)|raw }}</strong>: {{ value }}<br>
     {% endif %}
 {% endfor %}
+</body>
+</html>

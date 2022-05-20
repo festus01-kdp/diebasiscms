@@ -18,3 +18,7 @@
 #
 #logout:
 #    path: /logout
+showKontaktForm:
+  methods: [GET, POST]
+  path: /kontaktform
+  controller: App\Controller\KontaktFormController::showKontaktForm

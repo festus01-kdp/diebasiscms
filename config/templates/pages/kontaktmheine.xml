@@ -5,7 +5,7 @@
 
     <key>kontaktmheine</key>
 
-    <view>pages/kontakt-mheine</view>
+    <view>pages/kontaktmheine</view>
     <controller>Sulu\Bundle\WebsiteBundle\Controller\DefaultController::indexAction</controller>
     <cacheLifetime>1209600</cacheLifetime>
 
@@ -40,6 +40,320 @@
                 </property>
             </properties>
         </section>
+        <section name="kontaktheader">
+            <meta>
+                <title lang="en">Kontakt Header</title>
+                <title lang="de">Kontakt Header</title>
+            </meta>
+            <properties>
+                <property name="headlineheader" type="text_line" colspan="8">
+                    <meta>
+                        <title lang="en">Headline Header</title>
+                        <title lang="de">Headline Header</title>
+                    </meta>
+                </property>
+                <!-- Größe Header -->
+                <property name="headlineheadersize" type="single_select" colspan="4">
+                    <meta>
+                        <title lang="en">Größe</title>
+                        <title lang="de">Größe</title>
+                    </meta>
+                    <params>
+                        <param name="default_value" value="h4"/>
+                        <param name="values" type="collection">
+                            <param name="h1">
+                                <meta>
+                                    <title lang="en">H1</title>
+                                    <title lang="de">H1</title>
+                                </meta>
+                            </param>
+                            <param name="h2">
+                                <meta>
+                                    <title lang="en">H2</title>
+                                    <title lang="de">H2</title>
+                                </meta>
+                            </param>
+                            <param name="h3">
+                                <meta>
+                                    <title lang="en">H3</title>
+                                    <title lang="de">H3</title>
+                                </meta>
+                            </param>
+                            <param name="h4">
+                                <meta>
+                                    <title lang="en">H4</title>
+                                    <title lang="de">H4</title>
+                                </meta>
+                            </param>
+                            <param name="h5">
+                                <meta>
+                                    <title lang="en">H5</title>
+                                    <title lang="de">H5</title>
+                                </meta>
+                            </param>
+                            <param name="h6">
+                                <meta>
+                                    <title lang="en">H6</title>
+                                    <title lang="de">H6</title>
+                                </meta>
+                            </param>
+                        </param>
+
+                    </params>
+                </property>
+                <property name="sublineheader" type="text_line" colspan="8">
+                    <meta>
+                        <title lang="en">Subline Header</title>
+                        <title lang="de">Subline Header</title>
+                    </meta>
+                </property>
+                <!-- Größe SubHeader -->
+                <property name="sublineheadersize" type="single_select" colspan="4">
+                    <meta>
+                        <title lang="en">Größe</title>
+                        <title lang="de">Größe</title>
+                    </meta>
+                    <params>
+                        <param name="default_value" value="h6"/>
+                        <param name="values" type="collection">
+                            <param name="h1">
+                                <meta>
+                                    <title lang="en">H1</title>
+                                    <title lang="de">H1</title>
+                                </meta>
+                            </param>
+                            <param name="h2">
+                                <meta>
+                                    <title lang="en">H2</title>
+                                    <title lang="de">H2</title>
+                                </meta>
+                            </param>
+                            <param name="h3">
+                                <meta>
+                                    <title lang="en">H3</title>
+                                    <title lang="de">H3</title>
+                                </meta>
+                            </param>
+                            <param name="h4">
+                                <meta>
+                                    <title lang="en">H4</title>
+                                    <title lang="de">H4</title>
+                                </meta>
+                            </param>
+                            <param name="h5">
+                                <meta>
+                                    <title lang="en">H5</title>
+                                    <title lang="de">H5</title>
+                                </meta>
+                            </param>
+                            <param name="h6">
+                                <meta>
+                                    <title lang="en">H6</title>
+                                    <title lang="de">H6</title>
+                                </meta>
+                            </param>
+                        </param>
+
+                    </params>
+                </property>
+                <property name="textheader" type="text_editor">
+                    <meta>
+                        <title>Text Header</title>
+                    </meta>
+                </property>
+                <!-- Größe SubHeader -->
+                <property name="margintopheader" type="single_select" colspan="3">
+                    <meta>
+                        <title>Abstand oben Text Header </title>
+
+                    </meta>
+                    <params>
+                        <param name="default_value" value="mt-0"/>
+                        <param name="values" type="collection">
+                            <param name="mt-0">
+                                <meta>
+                                    <title lang="en">0</title>
+                                    <title lang="de">0</title>
+                                </meta>
+                            </param>
+                            <param name="mt-1">
+                                <meta>
+                                    <title lang="en">1</title>
+                                    <title lang="de">1</title>
+                                </meta>
+                            </param>
+                            <param name="mt-2">
+                                <meta>
+                                    <title lang="en">2</title>
+                                    <title lang="de">2</title>
+                                </meta>
+                            </param>
+                            <param name="mt-3">
+                                <meta>
+                                    <title lang="en">3</title>
+                                    <title lang="de">3</title>
+                                </meta>
+                            </param>
+                            <param name="mt-4">
+                                <meta>
+                                    <title lang="en">4</title>
+                                    <title lang="de">4</title>
+                                </meta>
+                            </param>
+                            <param name="mt-5">
+                                <meta>
+                                    <title lang="en">5</title>
+                                    <title lang="de">5</title>
+                                </meta>
+                            </param>
+                        </param>
+
+                    </params>
+                </property>
+                <property name="marginbuttomheader" type="single_select" colspan="3">
+                    <meta>
+                        <title>Abstand unten Text Header</title>
+                    </meta>
+                    <params>
+                        <param name="default_value" value="mt-0"/>
+                        <param name="values" type="collection">
+                            <param name="mt-0">
+                                <meta>
+                                    <title lang="en">0</title>
+                                    <title lang="de">0</title>
+                                </meta>
+                            </param>
+                            <param name="mt-1">
+                                <meta>
+                                    <title lang="en">1</title>
+                                    <title lang="de">1</title>
+                                </meta>
+                            </param>
+                            <param name="mt-2">
+                                <meta>
+                                    <title lang="en">2</title>
+                                    <title lang="de">2</title>
+                                </meta>
+                            </param>
+                            <param name="mt-3">
+                                <meta>
+                                    <title lang="en">3</title>
+                                    <title lang="de">3</title>
+                                </meta>
+                            </param>
+                            <param name="mt-4">
+                                <meta>
+                                    <title lang="en">4</title>
+                                    <title lang="de">4</title>
+                                </meta>
+                            </param>
+                            <param name="mt-5">
+                                <meta>
+                                    <title lang="en">5</title>
+                                    <title lang="de">5</title>
+                                </meta>
+                            </param>
+                        </param>
+
+                    </params>
+                </property>
+                <property name="margintopfooter" type="single_select" colspan="3">
+                    <meta>
+                        <title>Abstand oben Text Footer</title>
+                    </meta>
+                    <params>
+                        <param name="default_value" value="mt-0"/>
+                        <param name="values" type="collection">
+                            <param name="mt-0">
+                                <meta>
+                                    <title lang="en">0</title>
+                                    <title lang="de">0</title>
+                                </meta>
+                            </param>
+                            <param name="mt-1">
+                                <meta>
+                                    <title lang="en">1</title>
+                                    <title lang="de">1</title>
+                                </meta>
+                            </param>
+                            <param name="mt-2">
+                                <meta>
+                                    <title lang="en">2</title>
+                                    <title lang="de">2</title>
+                                </meta>
+                            </param>
+                            <param name="mt-3">
+                                <meta>
+                                    <title lang="en">3</title>
+                                    <title lang="de">3</title>
+                                </meta>
+                            </param>
+                            <param name="mt-4">
+                                <meta>
+                                    <title lang="en">4</title>
+                                    <title lang="de">4</title>
+                                </meta>
+                            </param>
+                            <param name="mt-5">
+                                <meta>
+                                    <title lang="en">5</title>
+                                    <title lang="de">5</title>
+                                </meta>
+                            </param>
+                        </param>
+
+                    </params>
+                </property>
+                <property name="marginbuttomfooter" type="single_select" colspan="3">
+                    <meta>
+                        <title>Abstand unten Text Footer</title>
+                    </meta>
+                    <params>
+                        <param name="default_value" value="mt-0"/>
+                        <param name="values" type="collection">
+                            <param name="mt-0">
+                                <meta>
+                                    <title lang="en">0</title>
+                                    <title lang="de">0</title>
+                                </meta>
+                            </param>
+                            <param name="mt-1">
+                                <meta>
+                                    <title lang="en">1</title>
+                                    <title lang="de">1</title>
+                                </meta>
+                            </param>
+                            <param name="mt-2">
+                                <meta>
+                                    <title lang="en">2</title>
+                                    <title lang="de">2</title>
+                                </meta>
+                            </param>
+                            <param name="mt-3">
+                                <meta>
+                                    <title lang="en">3</title>
+                                    <title lang="de">3</title>
+                                </meta>
+                            </param>
+                            <param name="mt-4">
+                                <meta>
+                                    <title lang="en">4</title>
+                                    <title lang="de">4</title>
+                                </meta>
+                            </param>
+                            <param name="mt-5">
+                                <meta>
+                                    <title lang="en">5</title>
+                                    <title lang="de">5</title>
+                                </meta>
+                            </param>
+                        </param>
+
+                    </params>
+                </property>
+
+            </properties>
+        </section>
 
         <property name="form" type="single_form_selection">
             <meta>
@@ -51,5 +365,130 @@
                 <param name="resourceKey" value="page"/>
             </params>
         </property>
+        <section name="kontaktfooter">
+            <meta>
+                <title lang="en">Kontakt Footer</title>
+                <title lang="de">Kontakt Footer</title>
+            </meta>
+            <properties>
+                <property name="headlinefooter" type="text_line" colspan="8">
+                    <meta>
+                        <title lang="en">Headline Footer</title>
+                        <title lang="de">Headline Footer</title>
+                    </meta>
+                </property>
+                <!-- Größe Headline Footer -->
+                <property name="headlinefootersize" type="single_select" colspan="4">
+                    <meta>
+                        <title lang="en">Größe</title>
+                        <title lang="de">Größe</title>
+                    </meta>
+                    <params>
+                        <param name="default_value" value="h6"/>
+                        <param name="values" type="collection">
+                            <param name="h1">
+                                <meta>
+                                    <title lang="en">H1</title>
+                                    <title lang="de">H1</title>
+                                </meta>
+                            </param>
+                            <param name="h2">
+                                <meta>
+                                    <title lang="en">H2</title>
+                                    <title lang="de">H2</title>
+                                </meta>
+                            </param>
+                            <param name="h3">
+                                <meta>
+                                    <title lang="en">H3</title>
+                                    <title lang="de">H3</title>
+                                </meta>
+                            </param>
+                            <param name="h4">
+                                <meta>
+                                    <title lang="en">H4</title>
+                                    <title lang="de">H4</title>
+                                </meta>
+                            </param>
+                            <param name="h5">
+                                <meta>
+                                    <title lang="en">H5</title>
+                                    <title lang="de">H5</title>
+                                </meta>
+                            </param>
+                            <param name="h6">
+                                <meta>
+                                    <title lang="en">H6</title>
+                                    <title lang="de">H6</title>
+                                </meta>
+                            </param>
+                        </param>
+
+                    </params>
+                </property>
+                <property name="sublinefooter" type="text_line" colspan="8">
+                    <meta>
+                        <title lang="en">Subline Footer</title>
+                        <title lang="de">Subline Footer</title>
+                    </meta>
+                </property>
+                <!-- Größe Subline footer -->
+                <property name="sublinefootersize" type="single_select" colspan="4">
+                    <meta>
+                        <title lang="en">Größe</title>
+                        <title lang="de">Größe</title>
+                    </meta>
+                    <params>
+                        <param name="default_value" value="h6"/>
+                        <param name="values" type="collection">
+                            <param name="h1">
+                                <meta>
+                                    <title lang="en">H1</title>
+                                    <title lang="de">H1</title>
+                                </meta>
+                            </param>
+                            <param name="h2">
+                                <meta>
+                                    <title lang="en">H2</title>
+                                    <title lang="de">H2</title>
+                                </meta>
+                            </param>
+                            <param name="h3">
+                                <meta>
+                                    <title lang="en">H3</title>
+                                    <title lang="de">H3</title>
+                                </meta>
+                            </param>
+                            <param name="h4">
+                                <meta>
+                                    <title lang="en">H4</title>
+                                    <title lang="de">H4</title>
+                                </meta>
+                            </param>
+                            <param name="h5">
+                                <meta>
+                                    <title lang="en">H5</title>
+                                    <title lang="de">H5</title>
+                                </meta>
+                            </param>
+                            <param name="h6">
+                                <meta>
+                                    <title lang="en">H6</title>
+                                    <title lang="de">H6</title>
+                                </meta>
+                            </param>
+                        </param>
+
+                    </params>
+                </property>
+                <property name="textfooter" type="text_editor">
+                    <meta>
+                        <title lang="en">Text</title>
+                        <title lang="de">Text</title>
+                    </meta>
+                </property>
+            </properties>
+        </section>
+
     </properties>
 </template>

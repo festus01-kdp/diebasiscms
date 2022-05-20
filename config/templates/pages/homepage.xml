@@ -14,6 +14,14 @@
     </meta>
 
     <properties>
+
+        <property name="organisation" type="contact_account_selection">
+            <meta>
+                <title lang="en">Organisation</title>
+                <title lang="de">Organisation</title>
+            </meta>
+        </property>
+
         <property name="title" type="text_line" mandatory="true">
             <meta>
                 <title lang="en">Title</title>
@@ -189,60 +197,122 @@
             </properties>
         </section>
 
-        <section name="homepagesaeulen">
+        <section name="homepagesaeulenblock">
             <meta>
-                <title lang="en">Säulen</title>
-                <title lang="de">Säulen</title>
+                <title lang="en">Die Säulen</title>
+                <title lang="de">Die Säulen</title>
             </meta>
             <properties>
-                <property name="homepagesaeule1header" type="text_line" colspan="4">
+                <block name="blocksaeulen">
+                    <types>
+                        <type name="blocksaeulen">
+                            <properties>
+                                <property name="homepagesaeulenblockheadline" type="text_line">
+                                    <meta>
+                                        <title lang="en">Header Säule</title>
+                                        <title lang="de">Header Säule</title>
+                                        <info_text lang="en">
+                                            Überschrift der Säule
+                                        </info_text>
+                                        <info_text lang="de">
+                                            Überschrift der Säule
+                                        </info_text>
+                                    </meta>
+                                </property>
+                                <property name="homepagesaeuleblocksubtext" type="text_area">
+                                    <meta>
+                                        <title lang="en">Text Säule</title>
+                                        <title lang="de">Text Säule</title>
+                                    </meta>
+                                </property>
+                                <property name="homepagesaeuleblockfarbe" type="color">
+                                    <meta>
+                                        <title lang="en">Color Säule</title>
+                                        <title lang="de">Farbe Säule</title>
+                                        <info_text lang="en">
+                                            Farbe der Säule
+                                        </info_text>
+                                        <info_text lang="de">
+                                            Farbe der Säule
+                                        </info_text>
+                                    </meta>
+                                </property>
+                            </properties>
+                        </type>
+                    </types>
+                </block>
+            </properties>
+        </section>
+        <section name="wirstehenfuer">
+            <meta>
+                <title lang="en">Wir stehen für</title>
+                <title lang="de">Wir stehen für</title>
+            </meta>
+            <properties>
+                <property name="wirstehenfuerheadline" type="text_line">
                     <meta>
-                        <title lang="en">Header Säule 1</title>
-                        <title lang="de">Header Säule 1</title>
+                        <title lang="en">Headline</title>
+                        <title lang="de">Headline</title>
                     </meta>
                 </property>
-                <property name="homepagesaeule1subline" type="text_area" colspan="8">
+                <property name="wirstehenfuersubline" type="text_line">
                     <meta>
-                        <title lang="en">Subline Säule 1</title>
-                        <title lang="de">Subline Säule 1</title>
+                        <title lang="en">Subline</title>
+                        <title lang="de">Subline</title>
                     </meta>
                 </property>
-                <property name="homepagesaeule2header" type="text_line" colspan="4">
+                <property name="wirstehenfuerimage" type="single_media_selection">
                     <meta>
-                        <title lang="en">Header Säule 2</title>
-                        <title lang="de">Header Säule 2</title>
+                        <title lang="en">Image</title>
+                        <title lang="de">Image</title>
                     </meta>
                 </property>
-                <property name="homepagesaeule2subline" type="text_area" colspan="8">
+                <property name="wirstehenfuerartikel" type="text_area">
                     <meta>
-                        <title lang="en">Subline Säule 2</title>
-                        <title lang="de">Subline Säule 2</title>
+                        <title lang="en">Text</title>
+                        <title lang="de">Text</title>
                     </meta>
                 </property>
-                <property name="homepagesaeule3header" type="text_line" colspan="4">
+            </properties>
+        </section>
+        <section name="diebasisprogram">
+            <meta>
+                <title lang="en">dieBasis Programm</title>
+            </meta>
+            <properties>
+                <property name="diebasisprogramheadline" type="text_line">
                     <meta>
-                        <title lang="en">Header Säule 3</title>
-                        <title lang="de">Header Säule 3</title>
+                        <title lang="en">Program Headline</title>
+                        <title lang="de">Program Headline</title>
                     </meta>
                 </property>
-                <property name="homepagesaeule3subline" type="text_area" colspan="8">
-                    <meta>
-                        <title lang="en">Subline Säule 3</title>
-                        <title lang="de">Subline Säule 3</title>
-                    </meta>
-                </property>
-                <property name="homepagesaeule4header" type="text_line" colspan="4">
-                    <meta>
-                        <title lang="en">Header Säule 4</title>
-                        <title lang="de">Header Säule 4</title>
-                    </meta>
-                </property>
-                <property name="homepagesaeule4subline" type="text_area" colspan="8">
-                    <meta>
-                        <title lang="en">Subline Säule 4</title>
-                        <title lang="de">Subline Säule 4</title>
-                    </meta>
-                </property>
+                <block name="programmpunkte">
+                    <types>
+                        <type name="programmpunkte">
+                            <properties>
+                                <property name="headline" type="text_line">
+                                    <meta>
+                                        <title lang="en">Program Haupttext</title>
+                                        <title lang="de">Program Haupttext</title>
+                                    </meta>
+                                </property>
+                                <block name="programmunterpunkte">
+                                    <types>
+                                        <type name="programmunterpunkte">
+                                            <properties>
+                                                <property name="subline" type="text_area">
+                                                    <meta>
+                                                        <title lang="en">Programm Unterpunkt</title>
+                                                    </meta>
+                                                </property>
+                                            </properties>
+                                        </type>
+                                    </types>
+                                </block>
+                            </properties>
+                        </type>
+                    </types>
+                </block>
             </properties>
         </section>
     </properties>

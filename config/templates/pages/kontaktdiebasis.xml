@@ -3,15 +3,15 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
 
-    <key>kontakt</key>
+    <key>kontaktdiebasis</key>
 
-    <view>pages/kontakt</view>
+    <view>pages/kontaktdiebasis</view>
     <controller>Sulu\Bundle\WebsiteBundle\Controller\DefaultController::indexAction</controller>
     <cacheLifetime>604800</cacheLifetime>
 
     <meta>
-        <title lang="en">Kontakt</title>
-        <title lang="de">Kontakt</title>
+        <title lang="en">Kontakt dieBasis</title>
+        <title lang="de">Kontakt dieBasis</title>
     </meta>
 
     <properties>
