@@ -1,0 +1,86 @@
+{% extends "basediebasiscms.html.twig" %}
+
+{% block content %}
+
+    {% if content.form %}
+        {% if app.request.get('send') != 'true' %}
+            {# FORM THEME #}
+            {% form_theme content.form '@SuluForm/themes/basic.html.twig' %}
+            {{ form_start(content.form) }}
+            <div class="container w-50 mt-5 kontakt-background">
+                <div class="row pt-4">
+                    <div class="col">
+                        <h4>{{ content.title }}</h4>
+                    </div>
+
+                </div>
+                <div class="row mt-4">
+                    <div class="col col-3">
+                        <p>{{ form_label(content.form.children['dropdown']) }}</p>
+                    </div>
+                    <div class="col">
+                        {{ form_widget(content.form.children['dropdown'], {'attr': {'class': 'col-9'}}) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-3">
+                        <p>{{ form_label(content.form.children['firstName']) }}</p>
+                    </div>
+                    <div class="col">
+                        {{ form_widget(content.form.children['firstName'], {'attr': {'class': 'col-9'}}) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-3">
+                        <p>{{ form_label(content.form.children['lastName']) }}</p>
+                    </div>
+                    <div class="col">
+                        {{ form_widget(content.form.children['lastName'], {'attr': {'class': 'col-9'}}) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-3">
+                        <p>{{ form_label(content.form.children['phone']) }}</p>
+                    </div>
+                    <div class="col">
+                        {{ form_widget(content.form.children['phone'], {'attr': {'class': 'col-9'}}) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-3">
+                        <p>{{ form_label(content.form.children['email']) }}</p>
+                    </div>
+                    <div class="col">
+                        {{ form_widget(content.form.children['email'], {'attr': {'class': 'col-9'}}) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-3">
+                        <p>{{ form_label(content.form.children['textarea']) }}</p>
+                    </div>
+                    <div class="col">
+                        {{ form_widget(content.form.children['textarea'], {'attr': {'class': 'col-9', 'rows': '4'}}) }}
+                    </div>
+                </div>
+                <div class="row mb-4 pb-4">
+                    <div class="col offset-3 mt-4">
+                        {{ form_widget(content.form.children['submit'], {'attr': {'class': 'btn btn-primary btn-sm'}}) }}
+                    </div>
+                </div>
+
+            </div>
+
+            {{ form_end(content.form) }}
+
+        {% else %}
+            <div class="container w-50 h-50">
+                <div class="row pt-5 pb-5">
+                    <div class="col text-center">
+                        {{ view.form.entity.successText|raw }}
+                    </div>
+                </div>
+            </div>
+
+        {% endif %}
+    {% endif %}
+{% endblock %}
