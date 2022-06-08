@@ -56,7 +56,11 @@
                                     <p>{{ form_label(content.form.children[formfeld.vars['name']]) }}</p>
                                 </div>
                                 <div class="col">
-                                    {{ form_widget(content.form.children[formfeld.vars['name']], {'attr': {'class': 'col-9'}}) }}
+                                    {% if formfeld.vars['name'] != 'checkbox' %}
+                                        {{ form_widget(content.form.children[formfeld.vars['name']], {'attr': {'class': 'col-9'}}) }}
+                                    {% else %}
+                                        {{ form_widget(content.form.children[formfeld.vars['name']]) }}
+                                    {% endif%}
                                 </div>
                             </div>
                         {% endif %}
