@@ -1,5 +1,6 @@
 {% extends "basediebasiscms.html.twig" %}
 {% block content %}
+{#    {{ dump(content) }}#}
     <section id="header">
         <header class="mt-5">
             <div class="container">
@@ -9,7 +10,7 @@
         <div class="row mt-5">
             <div class="col mt-0">
                 <div class="text-center">
-                    <h4><strong>Mit uns gibt es die Veränderung, denn Deine Stimme zählt, jeden Tag.</strong></h4>
+                    <h4><strong>{{ content.homepagesubline }}</strong></h4>
                 </div>
             </div>
         </div>
@@ -25,31 +26,41 @@
                     <div>
                         <h4 class="text-center">Unser Spitzenkandidat für die Landtagswahl in Niedersachen am 09.10.2022<br/>für
                             den Wahlkreis 38:<br/></h4>
-                        <h4 class="text-center mt-3"><a href="ltwnds">Matthias Heine<br/></a></h4>
+                        <h4 class="text-center mt-3"><a href="matthiasheine">Matthias Heine<br/></a></h4>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section id="gruendung-1" class="gruendung">
+    <section id="gruendung-1">
+        {% for artikel in content.blockartikel %}
         <div class="text-center" style="margin-top: 40px;">
-            <h2 data-aos="fade-up" data-aos-duration="500" class="section-title"
-                style="color: rgba(33,37,41,0.71);padding-top: 30px;">{{ content.homepagegruendungheadline }}</h2>
-            <hr data-aos="fade" data-aos-duration="500" data-aos-delay="200" class="hr-line">
+            <h2 data-aos="fade-up" data-aos-duration="500"
+                style="color: rgba(33,37,41,0.71);padding-top: 30px;">
+                {{ artikel.homepageartikelheadline }}
+            </h2>
+            <hr class="hr-line" data-aos="fade" data-aos-duration="500" data-aos-delay="200" />
+        </div>
+        <div class="text-center">
+            <h4 data-aos="fade-up" data-aos-duration="500"
+                style="color: rgba(33,37,41,0.71);">
+                {{ artikel.homepageartikelsubline }}
+            </h4>
         </div>
         <div class="container main-wrap">
             <div class="row">
                 <div class="col">
                     <div>
-                        {{ content.homepagegruendungsubline|raw }}
+                        {{ artikel.homepageartikelsubtext|raw }}
                     </div>
                 </div>
             </div>
         </div>
+        {% endfor %}
     </section>
-    <section id="about-us" class="about-us">
+    <section id="about-us">
         <div class="text-center" style="margin-top: 40px;">
-            <h2 data-aos="fade-up" data-aos-duration="500" class="section-title"
+            <h2 data-aos="fade-up" data-aos-duration="500"
                 style="color: rgba(33,37,41,0.71);padding-top: 30px;">{{ content.hoepageueberunsheadline }}</h2>
             <hr data-aos="fade" data-aos-duration="500" data-aos-delay="200" class="hr-line">
         </div>
@@ -106,7 +117,7 @@
                         <h2>{{ content.diebasisprogramheadline }}</h2>
                         {% for programmpunkt in content.programmpunkte %}
                             <div>
-                                <h5 class="heading-wir-stehen-fuer">
+                                <h5>
                                     <strong>{{ programmpunkt.headline }}</strong>
                                 </h5>
                                 <ul>
@@ -123,9 +134,9 @@
             </div>
         </div>
     </section>
-    {{ dump(content) }}
     <div>
         <a class="back-to-top hvr-back-pulse" href="#">
             <i class="fa fa-angle-up" style="color: rgb(37,178,231);"></i>
         </a>
-    </div></body>{% endblock %}
+    </div>
+{% endblock %}

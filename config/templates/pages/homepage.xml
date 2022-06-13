@@ -156,24 +156,47 @@
 
         <section name="homepagegruendungartikel">
             <meta>
-                <title lang="en">Subheader</title>
-                <title lang="de">Subheader</title>
+                <title lang="en">Artikel</title>
+                <title lang="de">Artikel</title>
             </meta>
             <properties>
-                <property name="homepagegruendungheadline" type="text_line">
+                <block name="blockartikel">
                     <meta>
-                        <title lang="en">Artikel 1</title>
-                        <title lang="de">Artikel 1</title>
+                        <title lang="en">Hauptartikel</title>
+                        <title lang="de">Hauptartikel</title>
                     </meta>
-                </property>
+                    <types>
+                        <type name="homepageartikel">
+                            <properties>
+                                <property name="homepageartikelheadline" type="text_line">
+                                    <meta>
+                                        <title lang="en">Headline</title>
+                                        <title lang="de">Headline</title>
+                                    </meta>
+                                </property>
 
-                <property name="homepagegruendungsubline" type="text_editor">
-                    <meta>
-                        <title lang="en">Subline 1</title>
-                        <title lang="de">Subline 1</title>
-                    </meta>
-                </property>
+                                <property name="homepageartikelsubline" type="text_line">
+                                    <meta>
+                                        <title lang="en">Subline</title>
+                                        <title lang="de">Subline</title>
+                                    </meta>
+                                </property>
+
+                                <property name="homepageartikelsubtext" type="text_editor">
+                                    <meta>
+                                        <title lang="en">Subtext</title>
+                                        <title lang="de">Subtext</title>
+                                    </meta>
+                                </property>
+
+                            </properties>
+                        </type>
+                    </types>
+
+                </block>
             </properties>
+
+
         </section>
 
         <section name="homepageueberuns">
