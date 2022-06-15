@@ -57,6 +57,33 @@
             </meta>
         </property>
 
+        <section name="homepageaktuell">
+            <meta>
+                <title lang="en">Aktuelle Kampagne</title>
+                <title lang="de">Aktuelle Kampagne</title>
+            </meta>
+            <properties>
+                <property name="homepageaktuellcolor" type="color" colspan="3">
+                    <meta>
+                        <title lang="en">Kampagne Farbe</title>
+                        <title lang="de">Kampagne Farbe</title>
+                    </meta>
+                </property>
+                <property name="homepageaktuellheadline" type="text_line" colspan="9">
+                    <meta>
+                        <title lang="en">Headline Aktuelle Kampagne</title>
+                        <title lang="de">Headline Aktuelle Kampagne</title>
+                    </meta>
+                </property>
+                <property name="homepageaktuellsubline" type="text_editor">
+                    <meta>
+                        <title lang="en">Subline Aktuelle Kampagne</title>
+                        <title lang="de">Subline Aktuelle Kampagne</title>
+                    </meta>
+                </property>
+            </properties>
+        </section>
+
          <section name="images">
             <meta>
                 <title lang="en">Bilder</title>

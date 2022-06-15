@@ -10,23 +10,28 @@
         <div class="row mt-5">
             <div class="col mt-0">
                 <div class="text-center">
+                    <h3><strong>{{ content.homepageheadline }}</strong></h3>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col mt-0">
+                <div class="text-center">
                     <h4><strong>{{ content.homepagesubline }}</strong></h4>
                 </div>
             </div>
         </div>
     </section>
-    <section class="mt-5">
+    <section class="mt-5" style="background-color: {{ content.homepageaktuellcolor }}">
         <div class="text-center">
-            <h2>Landtagswahl Niedersachsen</h2>
+            <h2>{{ content.homepageaktuellheadline }}</h2>
             <hr class="hr-line"/>
         </div>
         <div class="container main-wrap">
             <div class="row">
                 <div class="col">
                     <div>
-                        <h4 class="text-center">Unser Spitzenkandidat für die Landtagswahl in Niedersachen am 09.10.2022<br/>für
-                            den Wahlkreis 38:<br/></h4>
-                        <h4 class="text-center mt-3"><a href="matthiasheine">Matthias Heine<br/></a></h4>
+                        {{ content.homepageaktuellsubline|raw }}
                     </div>
                 </div>
             </div>
