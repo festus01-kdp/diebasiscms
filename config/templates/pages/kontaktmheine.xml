@@ -158,13 +158,13 @@
                 </property>
                 <property name="textheader" type="text_editor">
                     <meta>
-                        <title>Text Header</title>
+                        <title lang="en">Text Header</title>
                     </meta>
                 </property>
                 <!-- Größe SubHeader -->
                 <property name="margintopheader" type="single_select" colspan="3">
                     <meta>
-                        <title>Abstand oben Text Header </title>
+                        <title lang="en">Abstand oben Text Header </title>
 
                     </meta>
                     <params>
@@ -212,7 +212,7 @@
                 </property>
                 <property name="marginbuttomheader" type="single_select" colspan="3">
                     <meta>
-                        <title>Abstand unten Text Header</title>
+                        <title lang="en">Abstand unten Text Header</title>
                     </meta>
                     <params>
                         <param name="default_value" value="mt-0"/>
@@ -259,7 +259,7 @@
                 </property>
                 <property name="margintopfooter" type="single_select" colspan="3">
                     <meta>
-                        <title>Abstand oben Text Footer</title>
+                        <title lang="en">Abstand oben Text Footer</title>
                     </meta>
                     <params>
                         <param name="default_value" value="mt-0"/>
@@ -306,7 +306,7 @@
                 </property>
                 <property name="marginbuttomfooter" type="single_select" colspan="3">
                     <meta>
-                        <title>Abstand unten Text Footer</title>
+                        <title lang="en">Abstand unten Text Footer</title>
                     </meta>
                     <params>
                         <param name="default_value" value="mt-0"/>
