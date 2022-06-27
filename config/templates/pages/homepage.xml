@@ -202,13 +202,19 @@
                                         <title lang="de">Bild vor Headline</title>
                                     </meta>
                                 </property>
-                                <property name="homepageartikelimagesize" type="text_line" colspan="2">
+                                <property name="homepageartikelimagesize" type="text_line" colspan="1">
                                     <meta>
                                         <title lang="en">Size</title>
                                         <title lang="de">Größe</title>
                                     </meta>
                                 </property>
-                                <property name="homepageartikelimagebgcolor" type="color" colspan="5">
+                                <property name="homepageartikelimagealt" type="text_line" colspan="4">
+                                    <meta>
+                                        <title lang="en">Alt Text</title>
+                                        <title lang="de">Alt Text</title>
+                                    </meta>
+                                </property>
+                                <property name="homepageartikelimagebgcolor" type="color" colspan="2">
                                     <meta>
                                         <title lang="en">BG-Color</title>
                                         <title lang="de">HG-Farbe</title>

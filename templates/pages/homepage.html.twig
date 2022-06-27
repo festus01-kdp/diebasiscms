@@ -42,7 +42,7 @@
         <div class="text-center">
             {% if artikel.homepageartikelimage %}
             <div>
-                <img src={{ artikel.homepageartikelimage.url }} style="width: {{ artikel.homepageartikelimagesize }}px;"/>
+                <img src={{ artikel.homepageartikelimage.url }} style="width: {{ artikel.homepageartikelimagesize }}px;" alt="{{ artikel.homepageartikelimagealt }}" />
             </div>
             {% endif %}
             <h2 data-aos="fade-up" data-aos-duration="500"
