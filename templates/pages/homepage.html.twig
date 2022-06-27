@@ -22,7 +22,7 @@
             </div>
         </div>
     </section>
-    <section class="mt-5" style="background-color: {{ content.homepageaktuellcolor }}">
+    <section class="mt-5 mb-5" style="background-color: {{ content.homepageaktuellcolor }}">
         <div class="text-center">
             <h2>{{ content.homepageaktuellheadline }}</h2>
             <hr class="hr-line"/>
@@ -39,7 +39,12 @@
     </section>
     <section id="gruendung-1">
         {% for artikel in content.blockartikel %}
-        <div class="text-center" style="margin-top: 40px;">
+        <div class="text-center">
+            {% if artikel.homepageartikelimage %}
+            <div>
+                <img src={{ artikel.homepageartikelimage.url }} style="width: {{ artikel.homepageartikelimagesize }}px;"/>
+            </div>
+            {% endif %}
             <h2 data-aos="fade-up" data-aos-duration="500"
                 style="color: rgba(33,37,41,0.71);padding-top: 30px;">
                 {{ artikel.homepageartikelheadline }}

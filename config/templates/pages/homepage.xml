@@ -195,6 +195,26 @@
                     <types>
                         <type name="homepageartikel">
                             <properties>
+
+                                <property name="homepageartikelimage" type="single_media_selection" colspan="5">
+                                    <meta>
+                                        <title lang="en">Bild vor Headline</title>
+                                        <title lang="de">Bild vor Headline</title>
+                                    </meta>
+                                </property>
+                                <property name="homepageartikelimagesize" type="text_line" colspan="2">
+                                    <meta>
+                                        <title lang="en">Size</title>
+                                        <title lang="de">Größe</title>
+                                    </meta>
+                                </property>
+                                <property name="homepageartikelimagebgcolor" type="color" colspan="5">
+                                    <meta>
+                                        <title lang="en">BG-Color</title>
+                                        <title lang="de">HG-Farbe</title>
+                                    </meta>
+                                </property>
+
                                 <property name="homepageartikelheadline" type="text_line">
                                     <meta>
                                         <title lang="en">Headline</title>
@@ -208,7 +228,7 @@
                                         <title lang="de">Subline</title>
                                     </meta>
                                 </property>
-
+                                
                                 <property name="homepageartikelsubtext" type="text_editor">
                                     <meta>
                                         <title lang="en">Subtext</title>
