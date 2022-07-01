@@ -1,0 +1,73 @@
+<?xml version="1.0" ?>
+<template xmlns="http://schemas.sulu.io/template/template"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+
+    <key>footer_diebasis</key>
+
+    <meta>
+        <title lang="en">Footer</title>
+        <title lang="de">Fuß</title>
+    </meta>
+
+    <properties>
+        <property name="title" type="text_line" mandatory="true">
+            <meta>
+                <title lang="en">Title</title>
+                <title lang="de">Titel</title>
+            </meta>
+
+            <tag name="sulu.node.name"/>
+        </property>
+
+        <property name="subtitle1" type="text_line">
+            <meta>
+                <title lang="en">Subtitle 1</title>
+                <title lang="de">Untertitel 1</title>
+            </meta>
+        </property>
+
+        <property name="subtitle2" type="text_line">
+            <meta>
+                <title lang="en">Subtitle 2</title>
+                <title lang="de">Untertitel 2</title>
+            </meta>
+        </property>
+
+        <property name="subtitle3" type="text_line">
+            <meta>
+                <title lang="en">Subtitle 3</title>
+                <title lang="de">Untertitel 3</title>
+            </meta>
+        </property>
+
+        <property name="iban" type="text_line" colspan="6">
+            <meta>
+                <title lang="en">Konto IBAN</title>
+                <title lang="de">Konto IBAN</title>
+            </meta>
+        </property>
+
+        <property name="bic" type="text_line" colspan="6">
+            <meta>
+                <title lang="en">BIC</title>
+                <title lang="de">BIC</title>
+            </meta>
+        </property>
+
+        <property name="copyright" type="text_line" colspan="6">
+            <meta>
+                <title lang="en">copyright</title>
+                <title lang="de">copyright</title>
+            </meta>
+        </property>
+
+        <property name="lastline" type="text_line" colspan="6">
+            <meta>
+                <title lang="en">Last Line</title>
+                <title lang="de">Letzte Zeile</title>
+            </meta>
+        </property>
+
+    </properties>
+</template>

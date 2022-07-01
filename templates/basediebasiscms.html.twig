@@ -101,24 +101,26 @@
 
 		<footer>
 			{% block footer %}
+				{% set footer_snippet = sulu_snippet_load_default('footer_diebasis')[0].content %}
+{#				{{ dump(footer_snippet) }}#}
 				<section id="footer" class="footer">
 					<footer class="footer-dark">
 						<div class="container">
 							<div class="row" style="margin-bottom: -16px;">
 								<div class="col text-center mb-3">
-									<h4>Spendenkonto</h4>
+									<h4>{{ footer_snippet.title }}</h4>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col item text">
 									<div>
-										<p>per Banküberweisung<br><br>Basisdemokratische Partei Deutschland<br>Kreisverband Diepholz<br><strong>IBAN:</strong>
-											DE28 2505 0180 0910 5121 16<br><strong>BIC:</strong>&nbsp;SPKHDE2HXXX</p>
+										<p>{{ footer_snippet.subtitle2 }}<br><br>{{ footer_snippet.subtitle1 }}<br>{{ footer_snippet.subtitle3 }}<br><strong>IBAN:</strong>
+											{{ footer_snippet.iban }}<br><strong>BIC:</strong>&nbsp;{{ footer_snippet.bic }}</p>
 									</div>
 								</div>
 							</div>
 							<div class="col item">
-								<h3 class="footer-heading">WIR IM NETZ</h3>
+								<h3 class="footer-heading">{{ footer_snippet.lastline }}</h3>
 								<div>
 									<div class="col item social-media-icons">
 										<a class="social-media-icons-padding" href="https://telegram.me/die_basis_funkt" target="_blank">
@@ -130,7 +132,7 @@
 							<div class="row">
 								<div class="col">
 									<a href="/">
-										<p class="copyright">dieBasis KV Diepholz-Nienburg © 2022</p>
+										<p class="copyright">{{ footer_snippet.copyright }}</p>
 									</a>
 								</div>
 								<div class="col">
