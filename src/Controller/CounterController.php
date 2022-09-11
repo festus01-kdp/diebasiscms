@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\Response;
 class CounterController extends WebsiteController
 {
 
-    private $doctrine;
+    protected $doctrine;
 
     public function __construct(ManagerRegistry $doctrine)
     {
@@ -23,7 +23,7 @@ class CounterController extends WebsiteController
     {
         $clientIp = $this->container->get('request_stack')->getCurrentRequest()->getClientIp();
         $host =  $this->container->get('request_stack')->getCurrentRequest()->getHttpHost();
-        $jetzt = date_create('now')->add(new \DateInterval('PT2M'));
+        $jetzt = date_create('now');
 
         $counter = $this->doctrine->getManager('customer')->getRepository(Counter::class)->findOneBy(['clientIp' => $clientIp],['datetime' => 'DESC']);
         if($counter){
