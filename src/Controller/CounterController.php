@@ -7,10 +7,11 @@ use Doctrine\Persistence\ManagerRegistry;
 
 
 use Sulu\Bundle\WebsiteBundle\Controller\DefaultController;
+use Sulu\Bundle\WebsiteBundle\Controller\WebsiteController;
 use Sulu\Component\Content\Compat\StructureInterface;
 use Symfony\Component\HttpFoundation\Response;
 
-class CounterController extends DefaultController
+class CounterController extends WebsiteController
 {
 
     private $doctrine;
@@ -22,7 +23,6 @@ class CounterController extends DefaultController
 
     public function indexAction(StructureInterface $structure, $preview = false, $partial = false):Response
     {
-
         $clientIp = $this->container->get('request_stack')->getCurrentRequest()->getClientIp();
         $host =  $this->container->get('request_stack')->getCurrentRequest()->getHttpHost();
         $jetzt = date_create('now')->add(new \DateInterval('PT2M'));
@@ -55,7 +55,6 @@ class CounterController extends DefaultController
 
     protected function addCounter(StructureInterface $structure, ManagerRegistry $doctrine, \DateTime $jetzt, string $ip, string $host)
     {
-
         $entityManager = $doctrine->getManager('customer');
 
         $counter = (new Counter)
