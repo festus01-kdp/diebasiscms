@@ -5,8 +5,6 @@ namespace App\Controller;
 use App\Entity\Counter;
 use Doctrine\Persistence\ManagerRegistry;
 
-
-use Sulu\Bundle\WebsiteBundle\Controller\DefaultController;
 use Sulu\Bundle\WebsiteBundle\Controller\WebsiteController;
 use Sulu\Component\Content\Compat\StructureInterface;
 use Symfony\Component\HttpFoundation\Response;
