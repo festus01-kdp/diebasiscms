@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Counter;
 use Doctrine\Persistence\ManagerRegistry;
 
+
 use Sulu\Bundle\WebsiteBundle\Controller\DefaultController;
 use Sulu\Component\Content\Compat\StructureInterface;
 use Symfony\Component\HttpFoundation\Response;
@@ -12,30 +13,43 @@ use Symfony\Component\HttpFoundation\Response;
 class CounterController extends DefaultController
 {
 
-    public function indexMyAction(StructureInterface $structure, ManagerRegistry $doctrine): Response
+    private $doctrine;
+
+    public function __construct(ManagerRegistry $doctrine)
+    {
+        $this->doctrine = $doctrine;
+    }
+
+    public function indexAction(StructureInterface $structure, $preview = false, $partial = false):Response
     {
 
         $clientIp = $this->container->get('request_stack')->getCurrentRequest()->getClientIp();
         $host =  $this->container->get('request_stack')->getCurrentRequest()->getHttpHost();
         $jetzt = date_create('now')->add(new \DateInterval('PT2M'));
 
-        $counter = $doctrine->getManager('customer')->getRepository(Counter::class)->findOneBy(['clientIp' => $clientIp],['datetime' => 'DESC']);
+        $counter = $this->doctrine->getManager('customer')->getRepository(Counter::class)->findOneBy(['clientIp' => $clientIp],['datetime' => 'DESC']);
         if($counter){
-            $dateDb = $doctrine->getManager('customer')->getRepository(Counter::class)->findOneBy(['clientIp' => $clientIp],['datetime' => 'DESC']);
+            $dateDb = $this->doctrine->getManager('customer')->getRepository(Counter::class)->findOneBy(['clientIp' => $clientIp],['datetime' => 'DESC']);
             if($this->getTimeMinutesDifferenz($jetzt, $dateDb->getDatetime(), 2))
             {
                 $counter->setZaehler($counter->getZaehler() + 1);
                 $counter->setDatetime($jetzt);
                 $counter->setPage($structure->getView());
                 $counter->setHost($host);
-                $this->updateCounter($doctrine,$counter);
+                $this->updateCounter($this->doctrine,$counter);
             }
         } else
         {
-            $this->addCounter($structure, $doctrine, $jetzt, $clientIp, $host);
+            $this->addCounter($structure, $this->doctrine, $jetzt, $clientIp, $host);
         }
 
-        return parent::indexAction($structure, $preview = false, $partial = false);
+        $response = $this->renderStructure(
+            $structure,
+            [],
+            $preview,
+            $partial
+        );
+        return $response;
 
     }
 
