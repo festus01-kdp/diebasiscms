@@ -22,3 +22,9 @@ showKontaktForm:
   methods: [GET, POST]
   path: /kontaktform
   controller: App\Controller\KontaktFormController::showKontaktForm
+
+showCounterStatistik:
+  methods: [GET]
+  path: /showstatistik
+  controller: App\Controller\CounterStatistikController::showCounterStatistik
+
