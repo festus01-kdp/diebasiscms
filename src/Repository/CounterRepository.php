@@ -40,7 +40,8 @@ class CounterRepository extends ServiceEntityRepository
         $query = $this->_em->createQuery(
             "SELECT c.page, SUM(c.zaehler) summe FROM App\Entity\Counter c"
             ." WHERE c.id != 1"
-            ."GROUP BY c.page"
+            ." GROUP BY c.page"
+            ." ORDER BY summe DESC"
         );
 
         return $query->getResult();
