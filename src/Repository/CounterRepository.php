@@ -61,8 +61,6 @@ class CounterRepository extends ServiceEntityRepository
         $query = $this->findBy([],['datetime' => 'DESC'],[1]);
         $lastAccess = $query[0]->getDatetime()->getTimestamp();
 
-
-
         $returnArray = [
             'sumAccess' => $sumAccess,
             'lastAccess' => date('d.m.Y', $lastAccess),
