@@ -5,8 +5,8 @@
     <key>matthiasheine</key>
 
     <view>pages/matthiasheine</view>
-    <controller>Sulu\Bundle\WebsiteBundle\Controller\DefaultController::indexAction</controller>
-<!--    <controller>App\Controller\CounterController::indexMyAction</controller>-->
+<!--    <controller>Sulu\Bundle\WebsiteBundle\Controller\DefaultController::indexAction</controller>-->
+    <controller>App\Controller\CounterController::indexAction</controller>
     <cacheLifetime type="seconds">60</cacheLifetime>
 
     <meta>
