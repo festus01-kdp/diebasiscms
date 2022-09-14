@@ -6,7 +6,8 @@
 
     <view>pages/matthiasheine</view>
     <controller>Sulu\Bundle\WebsiteBundle\Controller\DefaultController::indexAction</controller>
-    <cacheLifetime>604800</cacheLifetime>
+<!--    <controller>App\Controller\CounterController::indexMyAction</controller>-->
+    <cacheLifetime type="seconds">60</cacheLifetime>
 
     <meta>
         <title lang="en">Landtagswahl 2022 Niedersachsen</title>
