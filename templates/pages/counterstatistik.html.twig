@@ -1,0 +1,25 @@
+{% extends "basediebasiscms.html.twig" %}
+{% block content %}
+{#    {{ dump(content) }}#}
+    <section>
+        <div class="container mb-4">
+            <div class="card ps-2 pe-2">
+                <h1 class="text-center">Statistik Besucherzähler</h1>
+                <h4>Anzahl Besucher: {{ content.counter.sumAccess }}</h4>
+                <h4>Erster Besuch: {{ content.counter.firstAccess }}</h4>
+                <h4>Letzter Besuch: {{ content.counter.lastAccess }}</h4>
+                <hr>
+                {% for page in content.counter.pages %}
+                    <div class="row">
+                        <div class="col">
+                            <h5>Seite: {{ page['page'] }}</h5>
+                        </div>
+                        <div class="col">
+                            <h5>Aufrufe: {{ page['summe'] }}</h5>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}
