@@ -34,7 +34,7 @@ class CounterController extends WebsiteController
                 $counter->setDatetime($jetzt);
                 $counter->setPage($structure->getView());
                 $counter->setHost($host);
-                $this->updateCounter($this->doctrine,$counter);
+                $this->updateCounter($this->doctrine);
             }
         } else
         {
@@ -68,7 +68,7 @@ class CounterController extends WebsiteController
 
     }
 
-    protected function updateCounter(ManagerRegistry $doctrine, Counter $counter)
+    protected function updateCounter(ManagerRegistry $doctrine)
     {
         $doctrine->getManager('customer')->flush();
     }
