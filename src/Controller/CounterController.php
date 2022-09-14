@@ -32,7 +32,7 @@ class CounterController extends WebsiteController
             {
                 $counter->setZaehler($counter->getZaehler() + 1);
                 $counter->setDatetime($jetzt);
-                $counter->setPage($structure->getView());
+                $counter->setPage($structure->getResourceLocator());
                 $counter->setHost($host);
                 $this->updateCounter($this->doctrine);
             }
@@ -56,7 +56,7 @@ class CounterController extends WebsiteController
         $entityManager = $doctrine->getManager('customer');
 
         $counter = (new Counter)
-            ->setPage($structure->getView())
+            ->setPage($structure->getResourceLocator())
             ->setZaehler(1)
             ->setDatetime($jetzt)
             ->setHost($host)
