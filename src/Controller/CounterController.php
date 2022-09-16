@@ -32,8 +32,9 @@ class CounterController extends WebsiteController
         {
             $counter = $this->doctrine->getManager('customer')->getRepository(Counter::class)->findOneBy(['clientIp' => $clientIp, 'page' => $page],['datetime' => 'DESC']);
             if($counter){
-                $dateDb = $this->doctrine->getManager('customer')->getRepository(Counter::class)->findOneBy(['clientIp' => $clientIp],['datetime' => 'DESC']);
-                if($this->getTimeMinutesDifferenz($jetzt, $dateDb->getDatetime(), 2))
+//                $dateDb = $this->doctrine->getManager('customer')->getRepository(Counter::class)->findOneBy(['clientIp' => $clientIp],['datetime' => 'DESC']);
+//                $myDate = $counter->getDatetime();
+                if($this->getTimeMinutesDifferenz($jetzt, $counter->getDatetime(), 2))
                 {
                     $counter->setZaehler($counter->getZaehler() + 1);
                     $counter->setDatetime($jetzt);
