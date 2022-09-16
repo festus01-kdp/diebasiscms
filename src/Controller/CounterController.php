@@ -24,21 +24,27 @@ class CounterController extends WebsiteController
         $clientIp = $this->container->get('request_stack')->getCurrentRequest()->getClientIp();
         $host =  $this->container->get('request_stack')->getCurrentRequest()->getHttpHost();
         $jetzt = date_create('now');
-
-        $counter = $this->doctrine->getManager('customer')->getRepository(Counter::class)->findOneBy(['clientIp' => $clientIp],['datetime' => 'DESC']);
-        if($counter){
-            $dateDb = $this->doctrine->getManager('customer')->getRepository(Counter::class)->findOneBy(['clientIp' => $clientIp],['datetime' => 'DESC']);
-            if($this->getTimeMinutesDifferenz($jetzt, $dateDb->getDatetime(), 2))
-            {
-                $counter->setZaehler($counter->getZaehler() + 1);
-                $counter->setDatetime($jetzt);
-                $counter->setPage($structure->getResourceLocator());
-                $counter->setHost($host);
-                $this->updateCounter($this->doctrine);
-            }
-        } else
+        $page = $structure->getResourceLocator();
+        /**
+         * $page ist nicht gesetzt wenn über admin aufgerufen wird
+         */
+        if($page)
         {
-            $this->addCounter($structure, $this->doctrine, $jetzt, $clientIp, $host);
+            $counter = $this->doctrine->getManager('customer')->getRepository(Counter::class)->findOneBy(['clientIp' => $clientIp, 'page' => $page],['datetime' => 'DESC']);
+            if($counter){
+                $dateDb = $this->doctrine->getManager('customer')->getRepository(Counter::class)->findOneBy(['clientIp' => $clientIp],['datetime' => 'DESC']);
+                if($this->getTimeMinutesDifferenz($jetzt, $dateDb->getDatetime(), 2))
+                {
+                    $counter->setZaehler($counter->getZaehler() + 1);
+                    $counter->setDatetime($jetzt);
+                    $counter->setPage($page);
+                    $counter->setHost($host);
+                    $this->updateCounter($this->doctrine);
+                }
+            } else
+            {
+                $this->addCounter($structure, $this->doctrine, $jetzt, $clientIp, $host, $page);
+            }
         }
 
         $response = $this->renderStructure(
@@ -51,12 +57,12 @@ class CounterController extends WebsiteController
 
     }
 
-    protected function addCounter(StructureInterface $structure, ManagerRegistry $doctrine, \DateTime $jetzt, string $ip, string $host)
+    protected function addCounter(StructureInterface $structure, ManagerRegistry $doctrine, \DateTime $jetzt, string $ip, string $host, string $page)
     {
         $entityManager = $doctrine->getManager('customer');
 
         $counter = (new Counter)
-            ->setPage($structure->getResourceLocator())
+            ->setPage($page)
             ->setZaehler(1)
             ->setDatetime($jetzt)
             ->setHost($host)
