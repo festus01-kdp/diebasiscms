@@ -25,7 +25,7 @@ class CounterController extends WebsiteController
         $host =  $this->container->get('request_stack')->getCurrentRequest()->getHttpHost();
         $jetzt = date_create('now');
         $page = $structure->getResourceLocator();
-        /**
+        /** @NOTE
          * $page ist nicht gesetzt wenn über admin aufgerufen wird
          */
         if($page)
