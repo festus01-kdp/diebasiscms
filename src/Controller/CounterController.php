@@ -26,7 +26,7 @@ class CounterController extends WebsiteController
         $jetzt = date_create('now');
         $page = $structure->getResourceLocator();
         /** @NOTE
-         * $page ist nicht gesetzt wenn über admin aufgerufen wird
+         * $page ist nicht gesetzt wenn über admin.config Seite aufgerufen wird
          */
         if($page)
         {
