@@ -5,9 +5,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta property="og:url" content="https://www.diebasis-diepholz-nienburg.de">
-		<meta property="og:title" content="dieBasis">
+		<meta property="site_name" content="Basisdemokratische Partei Deutschland | dieBasis Kreisverband Diepholz-Nienburg">
+		<meta property="og:title" content="dieBasis | Kreisverband Diepholz-Nienburg">
 		<meta property="og:type" content="website">
 		<meta property="og:image" content="/assets/img/LogoNavbar.png">
+		<meta property="og:image:alt" content="dieBasis - diebasis-diepholz-nienburg.de">
 		{% block meta %}
 			{% include "@SuluWebsite/Extension/seo.html.twig" with {
             "seo": extension.seo|default([]),
@@ -32,6 +34,9 @@
 			<link rel="stylesheet" href="/assets/css/Newsletter-Subscription-Form.css">
 			<link rel="stylesheet" href="/assets/css/styles.css">
 			<link rel="stylesheet" href="/assets/css/timeline.css">
+			<link rel="stylesheet" href="{{ asset('assets/css/swiper-bundle.min.css') }}">
+			<link rel="stylesheet" href="{{ asset('assets/css/swiper-icons.css') }}">
+			<link rel="stylesheet" href="{{ asset('assets/css/Simple-Slider-Simple-Slider.css') }}">
 		{% endblock %}
 	</head>
 	<body>
@@ -154,8 +159,9 @@
 			<script src="/assets/js/bs-init.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 			<script src="/assets/js/clean-blog.js"></script>
-			<script src="/assets/js/diebasis.js"></script>
 			<script src="/assets/js/lightbox.js"></script>
+			<script src="{{ asset('assets/js/swiper-bundle.min.js') }}"></script>
+			<script src="{{ asset('assets/js/Simple-Slider.js') }}"></script>
 		{% endblock %}
 	</body>
 </html>
