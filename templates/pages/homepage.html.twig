@@ -1,13 +1,13 @@
 {% extends "basediebasiscms.html.twig" %}
 {% block content %}
-{# {{ dump(content) }} #}
+{# {{ dump(content) }}#}
 <div class="row ms-0 me-0 justify-content-center">
     {% if content.sidebarsichtbar %}
     <div id="maincontent" class="col-lg-9 col-xl-8">
         {% else %}
         <div id="maincontent" class="col">
             {% endif %}
-            {% if content.sliderbilder %}
+            {% if content.sliderbilder and content.showslider %}
                 <section id="slider">
                     <div class="container mb-4 mt-4">
                         <div class="swiper">
