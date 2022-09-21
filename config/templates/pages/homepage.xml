@@ -1,11 +1,13 @@
 <?xml version="1.0" ?>
 <template xmlns="http://schemas.sulu.io/template/template"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
 
     <key>homepage</key>
 
     <view>pages/homepage</view>
     <controller>Sulu\Bundle\WebsiteBundle\Controller\DefaultController::indexAction</controller>
+<!--    <controller>App\Controller\CounterController::indexAction</controller>-->
     <cacheLifetime>86400</cacheLifetime>
 
     <meta>
@@ -56,7 +58,76 @@
                 <title lang="de">Subline</title>
             </meta>
         </property>
+        <section name="slider">
+            <meta>
+                <title lang="en">Slider</title>
+                <title lang="de">Slider</title>
+            </meta>
+            <properties>
+                <block name="sliderbilder">
+                    <types>
+                        <type name="single_media_selection">
+                            <properties>
+                                <property name="sliderimage" type="single_media_selection" mandatory="true">
+                                    <meta>
+                                        <title lang="en">Slider Bild</title>
+                                        <title lang="de">Slider Bild</title>
+                                    </meta>
+                                </property>
+                            </properties>
+                        </type>
+                    </types>
+                </block>
+            </properties>
+        </section>
 
+        <section name="sidebar">
+            <meta>
+                <title lang="en">Sidebar</title>
+                <title lang="de">Sidebar</title>
+            </meta>
+            <properties>
+                <property name="sidebarsichtbar" type="checkbox">
+                    <params>
+                        <param name="type" value="checkbox"/>
+                        <param name="default_value" value="true"/>
+                        <param name="label">
+                            <meta>
+                                <title lang="en">show Sidebar</title>
+                                <title lang="de">Sidebar anzeigen</title>
+                            </meta>
+                        </param>
+                    </params>
+                </property>
+                <block name="sidebarinhalt" default-type="single_media_selection">
+                    <types>
+                        <type name="single_media_selection">
+                            <properties>
+                                <property name="sidebarimage" type="single_media_selection" colspan="6">
+                                    <meta>
+                                        <title lang="en">Image</title>
+                                        <title lang="de">Image</title>
+                                    </meta>
+                                </property>
+                                <property name="sidebarlink" type="link" colspan="6">
+                                    <meta>
+                                        <title lang="en">URL</title>
+                                        <title lang="de">URL</title>
+                                    </meta>
+                                </property>
+                                <property name="sidebartext" type="text_editor">
+                                    <meta>
+                                        <title lang="en">Text</title>
+                                        <title lang="de">Text</title>
+                                    </meta>
+                                </property>
+                            </properties>
+                        </type>
+                    </types>
+                </block>
+
+            </properties>
+        </section>
         <section name="homepageaktuell">
             <meta>
                 <title lang="en">Aktuelle Kampagne</title>
@@ -84,7 +155,7 @@
             </properties>
         </section>
 
-         <section name="images">
+        <section name="images">
             <meta>
                 <title lang="en">Bilder</title>
                 <title lang="de">Bilder</title>
@@ -94,16 +165,16 @@
                     <meta>
                         <title lang="en">Image Navbar</title>
                         <title lang="de">Image Navbar</title>
-                    </meta>    
+                    </meta>
                 </property>
-                <property name="homepageheaderimage" type="single_media_selection" colspan="6"> 
+                <property name="homepageheaderimage" type="single_media_selection" colspan="6">
                     <meta>
                         <title lang="en">Image Header</title>
                         <title lang="de">Image Header</title>
                     </meta>
                 </property>
             </properties>
-        </section>  
+        </section>
 
         <section name="sectionhomepagebilderteam">
             <meta>
@@ -136,7 +207,7 @@
                                 <property name="geschlecht" type="single_select" colspan="3" mandatory="true">
                                     <meta>
                                         <title lang="en">Geschlecht</title>
-                                        <title lang="de">Geschlecht</title> 
+                                        <title lang="de">Geschlecht</title>
                                     </meta>
                                     <params>
                                         <param name="values" type="collection">
@@ -234,7 +305,7 @@
                                         <title lang="de">Subline</title>
                                     </meta>
                                 </property>
-                                
+
                                 <property name="homepageartikelsubtext" type="text_editor">
                                     <meta>
                                         <title lang="en">Subtext</title>

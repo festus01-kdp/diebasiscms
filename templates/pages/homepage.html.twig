@@ -1,152 +1,206 @@
 {% extends "basediebasiscms.html.twig" %}
 {% block content %}
-{#    {{ dump(content) }}#}
-    <section id="header">
-        <header class="mt-5">
-            <div class="container">
-                <img class="img-fluid" src="{{ content.homepageheaderimage.url }}"/>
-            </div>
-        </header>
-        <div class="row mt-5">
-            <div class="col mt-0">
-                <div class="text-center">
-                    <h3><strong>{{ content.homepageheadline }}</strong></h3>
-                </div>
-            </div>
-        </div>
-        <div class="row mt-5">
-            <div class="col mt-0">
-                <div class="text-center">
-                    <h4><strong>{{ content.homepagesubline }}</strong></h4>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="mt-5 mb-5" style="background-color: {{ content.homepageaktuellcolor }}">
-        <div class="text-center">
-            <h2>{{ content.homepageaktuellheadline }}</h2>
-            <hr class="hr-line"/>
-        </div>
-        <div class="container main-wrap">
-            <div class="row">
-                <div class="col">
-                    <div>
-                        {{ content.homepageaktuellsubline|raw }}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="gruendung-1">
-        {% for artikel in content.blockartikel %}
-        <div class="text-center">
-            {% if artikel.homepageartikelimage %}
-            <div>
-                <img src={{ artikel.homepageartikelimage.url }} style="width: {{ artikel.homepageartikelimagesize }}px;" alt="{{ artikel.homepageartikelimagealt }}" />
-            </div>
+{# {{ dump(content) }} #}
+<div class="row ms-0 me-0 justify-content-center">
+    {% if content.sidebarsichtbar %}
+    <div id="maincontent" class="col-lg-9 col-xl-8">
+        {% else %}
+        <div id="maincontent" class="col">
             {% endif %}
-            <h2 data-aos="fade-up" data-aos-duration="500"
-                style="color: rgba(33,37,41,0.71);padding-top: 30px;">
-                {{ artikel.homepageartikelheadline }}
-            </h2>
-            <hr class="hr-line" data-aos="fade" data-aos-duration="500" data-aos-delay="200" />
-        </div>
-        <div class="text-center">
-            <h4 data-aos="fade-up" data-aos-duration="500"
-                style="color: rgba(33,37,41,0.71);">
-                {{ artikel.homepageartikelsubline }}
-            </h4>
-        </div>
-        <div class="container main-wrap">
-            <div class="row">
-                <div class="col">
-                    <div>
-                        {{ artikel.homepageartikelsubtext|raw }}
+            {% if content.sliderbilder %}
+                <section id="slider">
+                    <div class="container mb-4 mt-4">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                {% for sliderbild in content.sliderbilder %}
+                                    {% if loop.first %}
+                                        <div class="swiper-slide div-swipe"><img class="img-fluid" alt="dieBasis-Image"
+                                                                                 src="{{ sliderbild.sliderimage.url }}"/>
+                                        </div>
+                                    {% else %}
+                                        <div class="swiper-slide"><img class="img-fluid" alt="dieBasis-Image"
+                                                                       src="{{ sliderbild.sliderimage.url }}"/></div>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </section>
+            {% endif %}
+            <section id="header">
+                <header class="mt-5">
+                    <div class="container">
+                        <img class="img-fluid" src="{{ content.homepageheaderimage.url }}"
+                             alt="dieBasis Homepage Image"/>
+                    </div>
+                </header>
+                <div class="row mt-5">
+                    <div class="col mt-0">
+                        <div class="text-center">
+                            <h3><strong>{{ content.homepageheadline }}</strong></h3>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        {% endfor %}
-    </section>
-    <section id="about-us">
-        <div class="text-center" style="margin-top: 40px;">
-            <h2 data-aos="fade-up" data-aos-duration="500"
-                style="color: rgba(33,37,41,0.71);padding-top: 30px;">{{ content.hoepageueberunsheadline }}</h2>
-            <hr data-aos="fade" data-aos-duration="500" data-aos-delay="200" class="hr-line">
-        </div>
-        <div class="container main-wrap">
-            <div class="row mb-4">
-                <div class="col">
-                    <div>
-                        {{ content.homepageueberunssubline|raw }}
+                <div class="row mt-5">
+                    <div class="col mt-0">
+                        <div class="text-center">
+                            <h4><strong>{{ content.homepagesubline }}</strong></h4>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                {% for saeule in content.blocksaeulen %}
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                        <div>
-                            <h6 style="color: var(--bs-light);text-align: center; background: {{ saeule.homepagesaeuleblockfarbe }};">
-                                <br>{{ saeule.homepagesaeulenblockheadline }}<br><br>
-                            </h6>
-                            <p class="text-break text-saeulen text-trennung-auto"
-                               style="background: {{ saeule.homepagesaeuleblockfarbe }};border-right: 8px solid {{ saeule.homepagesaeuleblockfarbe }};border-left: 8px solid {{ saeule.homepagesaeuleblockfarbe }};">
-                                <br>{{ saeule.homepagesaeuleblocksubtext }}<br>
-                            </p>
+            </section>
+            <section class="mt-5 mb-5" style="background-color: {{ content.homepageaktuellcolor }}">
+                <div class="text-center">
+                    <h2>{{ content.homepageaktuellheadline }}</h2>
+                    <hr class="hr-line"/>
+                </div>
+                <div class="container main-wrap">
+                    <div class="row">
+                        <div class="col">
+                            <div>
+                                {{ content.homepageaktuellsubline|raw }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="gruendung-1">
+                {% for artikel in content.blockartikel %}
+                    <div class="text-center">
+                        {% if artikel.homepageartikelimage %}
+                            <div>
+                                <img src={{ artikel.homepageartikelimage.url }} style="width:{{ artikel.homepageartikelimagesize }}px;
+                                     alt="{{ artikel.homepageartikelimagealt }}"/>
+                            </div>
+                        {% endif %}
+                        <h2 data-aos="fade-up" data-aos-duration="500"
+                            style="color: rgba(33,37,41,0.71);padding-top: 30px;">
+                            {{ artikel.homepageartikelheadline }}
+                        </h2>
+                        <hr class="hr-line" data-aos="fade" data-aos-duration="500" data-aos-delay="200"/>
+                    </div>
+                    <div class="text-center">
+                        <h4 data-aos="fade-up" data-aos-duration="500"
+                            style="color: rgba(33,37,41,0.71);">
+                            {{ artikel.homepageartikelsubline }}
+                        </h4>
+                    </div>
+                    <div class="container main-wrap">
+                        <div class="row">
+                            <div class="col">
+                                <div>
+                                    {{ artikel.homepageartikelsubtext|raw }}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 {% endfor %}
-            </div>
-        </div>
-    </section>
-    <section id="wir-stehen-fuer" class="wir-stehen-fuer">
-        <div class="text-center">
-            <h2 data-aos="fade-up" data-aos-duration="500">{{ content.wirstehenfuerheadline }}</h2>
-            <hr data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" class="hr-line">
-        </div>
-        <div class="container mt-1">
-            <div class="row text-center mb-4">
-                <div class="col mb-2">
-                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300"><img
-                                src="{{ content.wirstehenfuerimage.url }}"
-                                alt="dieBasis Kreisverband Diepholz Nienburg" width="280"></div>
+            </section>
+            <section id="about-us">
+                <div class="text-center" style="margin-top: 40px;">
+                    <h2 data-aos="fade-up" data-aos-duration="500"
+                        style="color: rgba(33,37,41,0.71);padding-top: 30px;">{{ content.hoepageueberunsheadline }}</h2>
+                    <hr data-aos="fade" data-aos-duration="500" data-aos-delay="200" class="hr-line">
                 </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <div>
-                        <p class="text-start" style="color: rgb(33, 37, 41);font-size: 18px;">
-                            {{ content.wirstehenfuerartikel|raw }}
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <div class="section-lv-dhni">
-                        <h2>{{ content.diebasisprogramheadline }}</h2>
-                        {% for programmpunkt in content.programmpunkte %}
+                <div class="container main-wrap">
+                    <div class="row mb-4">
+                        <div class="col">
                             <div>
-                                <h5>
-                                    <strong>{{ programmpunkt.headline }}</strong>
-                                </h5>
-                                <ul>
-                                    {% for programmunterpunkt in programmpunkt.programmunterpunkte %}
-                                    <li>
-                                        {{ programmunterpunkt.subline }}
-                                    </li>
-                                    {% endfor %}
-                                </ul>
+                                {{ content.homepageueberunssubline|raw }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        {% for saeule in content.blocksaeulen %}
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                                <div>
+                                    <h6 style="color: var(--bs-light);text-align: center; background: {{ saeule.homepagesaeuleblockfarbe }};">
+                                        <br>{{ saeule.homepagesaeulenblockheadline }}<br><br>
+                                    </h6>
+                                    <p class="text-break text-saeulen text-trennung-auto"
+                                       style="background: {{ saeule.homepagesaeuleblockfarbe }};border-right: 8px solid {{ saeule.homepagesaeuleblockfarbe }};border-left: 8px solid {{ saeule.homepagesaeuleblockfarbe }};">
+                                        <br>{{ saeule.homepagesaeuleblocksubtext }}<br>
+                                    </p>
+                                </div>
                             </div>
                         {% endfor %}
                     </div>
                 </div>
-            </div>
+            </section>
+            <section id="wir-stehen-fuer" class="wir-stehen-fuer">
+                <div class="text-center">
+                    <h2 data-aos="fade-up" data-aos-duration="500">{{ content.wirstehenfuerheadline }}</h2>
+                    <hr data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" class="hr-line">
+                </div>
+                <div class="container mt-1">
+                    <div class="row text-center mb-4">
+                        <div class="col mb-2">
+                            <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300"><img
+                                        src="{{ content.wirstehenfuerimage.url }}"
+                                        alt="dieBasis Kreisverband Diepholz Nienburg" width="280"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div>
+                                <p class="text-start" style="color: rgb(33, 37, 41);font-size: 18px;">
+                                    {{ content.wirstehenfuerartikel|raw }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="section-lv-dhni">
+                                <h2>{{ content.diebasisprogramheadline }}</h2>
+                                {% for programmpunkt in content.programmpunkte %}
+                                    <div>
+                                        <h5>
+                                            <strong>{{ programmpunkt.headline }}</strong>
+                                        </h5>
+                                        <ul>
+                                            {% for programmunterpunkt in programmpunkt.programmunterpunkte %}
+                                                <li>
+                                                    {{ programmunterpunkt.subline }}
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-    </section>
+
+        {% if content.sidebarsichtbar %}
+        <div class="col-sm-2 col-md-2 col-lg-3 col-xl-3 mt-5 ms-3 sidebar">
+            {% set sidebarinhalte = content.sidebarinhalt %}
+            {% for sidebarinhalt in sidebarinhalte %}
+            <div class="row">
+{#{{ dump(sidebarinhalt) }}#}
+                <div class="col me-4 mt-4 text-center sidebar-col"><a href="{{ sidebarinhalt.sidebarlink }}"><img
+                                class="img-fluid mt-1 mb-1" alt="dieBasis-Image" src="{{ sidebarinhalt.sidebarimage.url }}"/></a>
+                    <div class="container sidebar-row">
+                        <div class="col">
+                            <p>{{ sidebarinhalt.sidebartext|raw }}</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+    </div>
+
     <div>
         <a class="back-to-top hvr-back-pulse" href="#">
             <i class="fa fa-angle-up" style="color: rgb(37,178,231);"></i>
         </a>
     </div>
-{% endblock %}
+</div>
+    {% endblock %}
