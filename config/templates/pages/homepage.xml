@@ -64,7 +64,19 @@
                 <title lang="de">Slider</title>
             </meta>
             <properties>
-                <block name="sliderbilder">
+                <property name="showslider" type="checkbox" colspan="2">
+                    <params>
+                        <param name="type" value="checkbox"/>
+                        <param name="default_value" value="true"/>
+                        <param name="label">
+                            <meta>
+                                <title lang="en">Slider on</title>
+                                <title lang="de">Slider an</title>
+                            </meta>
+                        </param>
+                    </params>
+                </property>
+                <block name="sliderbilder" colspan="10">
                     <types>
                         <type name="single_media_selection">
                             <properties>
