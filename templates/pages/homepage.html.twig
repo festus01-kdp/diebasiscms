@@ -14,11 +14,11 @@
                             <div class="swiper-wrapper">
                                 {% for sliderbild in content.sliderbilder %}
                                     {% if loop.first %}
-                                        <div class="swiper-slide div-swipe"><img class="img-fluid" alt="dieBasis-Image"
+                                        <div class="swiper-slide div-swipe"><img class="img-fluid" alt="{{ sliderbild.sliderimagealttext }}"
                                                                                  src="{{ sliderbild.sliderimage.url }}"/>
                                         </div>
                                     {% else %}
-                                        <div class="swiper-slide"><img class="img-fluid" alt="dieBasis-Image"
+                                        <div class="swiper-slide"><img class="img-fluid" alt="{{ sliderbild.sliderimagealttext }}"
                                                                        src="{{ sliderbild.sliderimage.url }}"/></div>
                                     {% endif %}
                                 {% endfor %}

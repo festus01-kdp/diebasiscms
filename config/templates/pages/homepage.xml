@@ -64,7 +64,7 @@
                 <title lang="de">Slider</title>
             </meta>
             <properties>
-                <property name="showslider" type="checkbox" colspan="2">
+                <property name="showslider" type="checkbox">
                     <params>
                         <param name="type" value="checkbox"/>
                         <param name="default_value" value="true"/>
@@ -76,14 +76,20 @@
                         </param>
                     </params>
                 </property>
-                <block name="sliderbilder" colspan="10">
+                <block name="sliderbilder">
                     <types>
                         <type name="single_media_selection">
                             <properties>
-                                <property name="sliderimage" type="single_media_selection" mandatory="true">
+                                <property name="sliderimage" type="single_media_selection" mandatory="true" colspan="5">
                                     <meta>
                                         <title lang="en">Slider Bild</title>
                                         <title lang="de">Slider Bild</title>
+                                    </meta>
+                                </property>
+                                <property name="sliderimagealttext" type="text_line" colspan="7">
+                                    <meta>
+                                        <title lang="en">Alt Imagetext</title>
+                                        <title lang="de">Alt Imagetext</title>
                                     </meta>
                                 </property>
                             </properties>
