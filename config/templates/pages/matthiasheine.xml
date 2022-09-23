@@ -29,14 +29,14 @@
 
         <property name="subtitle" type="text_line">
             <meta>
-                <title lang="en">Subtitel</title>
+                <title lang="en">Subtitle</title>
                 <title lang="de">Subtitle</title>
             </meta>
         </property>
 
         <property name="subsubtitle" type="text_line">
             <meta>
-                <title lang="en">Sub-Subtitel</title>
+                <title lang="en">Sub-Subtitle</title>
                 <title lang="de">Sub-Subtitle</title>
             </meta>
         </property>
@@ -53,7 +53,8 @@
 
         <property name="image" type="single_media_selection" colspan="3">
             <meta>
-                <title lang="en">Bild</title>
+                <title lang="en">Image</title>
+                <title lang="de">Bild</title>
             </meta>
 
             <params>
@@ -63,7 +64,7 @@
 
         <property name="alt_bildtext" type="text_line" colspan="3">
             <meta>
-                <title lang="en">Bildtitel</title>
+                <title lang="en">Imagetitle</title>
                 <title lang="de">Bildtitel</title>
             </meta>
         </property>
@@ -178,14 +179,16 @@
 
         <property name="untertitel" type="text_editor">
             <meta>
-                <title lang="en">Untertitel</title>
+                <title lang="en">Subtitle</title>
                 <title lang="de">Untertitel</title>
+                <info_text lang="en">Visible if Image present</info_text>
+                <info_text lang="de">Wird nur angezeigt wenn Bild ausgewählt</info_text>
             </meta>
         </property>
 
         <property name="haupttext" type="text_editor">
             <meta>
-                <title lang="en">Haupttext</title>
+                <title lang="en">Maintext</title>
                 <title lang="de">Haupttext</title>
             </meta>
         </property>
