@@ -31,8 +31,10 @@
             <section id="header">
                 <header class="mt-5">
                     <div class="container">
+                        {% if content.homepageheaderimage %}
                         <img class="img-fluid" src="{{ content.homepageheaderimage.url }}"
                              alt="dieBasis Homepage Image"/>
+                        {% endif %}
                     </div>
                 </header>
                 <div class="row mt-5">
@@ -136,9 +138,13 @@
                 <div class="container mt-1">
                     <div class="row text-center mb-4">
                         <div class="col mb-2">
-                            <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300"><img
+                            <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+                                {% if content.wirstehenfuerimage %}
+                                <img
                                         src="{{ content.wirstehenfuerimage.url }}"
-                                        alt="dieBasis Kreisverband Diepholz Nienburg" width="280"></div>
+                                        alt="dieBasis Kreisverband Diepholz Nienburg" width="280">
+                                {% endif %}
+                            </div>
                         </div>
                     </div>
                     <div class="row">
