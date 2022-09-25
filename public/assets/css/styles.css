@@ -308,13 +308,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  font-family: 'Open Sans', serif;
+  font-family: 'Open Sans', sans-serif;
   color: #4a4949;
   font-weight: 400;
 }
 
 .p-fett {
-  font-family: 'Open Sans Bold', Arial, serif;
+  font-family: 'Open Sans Bold', sans-serif;
   font-size: 20px;
 }
 
@@ -337,12 +337,12 @@ body {
 }
 
 .div-heading .heading-bolder {
-  font-family: 'Open Sans Bold', serif;
+  font-family: 'Open Sans Bold', sans-serif;
   font-size: 24px;
 }
 
 .div-aufzaehlung .heading-bolder {
-  font-family: 'Open Sans Bold', serif;
+  font-family: 'Open Sans Bold', sans-serif;
   font-size: 20px;
 }
 
