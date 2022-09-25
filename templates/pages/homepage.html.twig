@@ -15,11 +15,18 @@
                                 {% for sliderbild in content.sliderbilder %}
                                     {% if loop.first %}
                                         <div class="swiper-slide div-swipe"><img class="img-fluid" alt="{{ sliderbild.sliderimagealttext }}"
-                                                                                 src="{{ sliderbild.sliderimage.url }}"/>
+                                                                                 src="{{ sliderbild.sliderimage.url }}" loading="lazy"/>
+                                            <div>
+                                                <p class="image-text-button-center" style="font-size: {{ sliderbild.sliderimagetextsize }}px; color: {{ sliderbild.sliderimagetextcolor }}">{{ sliderbild.sliderimagetext }}</p>
+                                            </div>
                                         </div>
                                     {% else %}
                                         <div class="swiper-slide"><img class="img-fluid" alt="{{ sliderbild.sliderimagealttext }}"
-                                                                       src="{{ sliderbild.sliderimage.url }}"/></div>
+                                                                       src="{{ sliderbild.sliderimage.url }}" loading="lazy"/>
+                                            <div>
+                                                <p class="image-text-button-center" style="font-size: {{ sliderbild.sliderimagetextsize }}px; color: {{ sliderbild.sliderimagetextcolor }}">{{ sliderbild.sliderimagetext }}</p>
+                                            </div>
+                                        </div>
                                     {% endif %}
                                 {% endfor %}
                             </div>

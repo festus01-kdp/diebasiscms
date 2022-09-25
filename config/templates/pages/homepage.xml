@@ -92,6 +92,30 @@
                                         <title lang="de">Alt Imagetext</title>
                                     </meta>
                                 </property>
+                                <property name="sliderimagetext" type="text_line" colspan="8">
+                                    <meta>
+                                        <title lang="en">Textline</title>
+                                        <title lang="de">Textzeile</title>
+                                    </meta>
+                                </property>
+                                <property name="sliderimagetextsize" type="number" colspan="2">
+                                    <meta>
+                                        <title lang="en">Textsize in px</title>
+                                        <title lang="de">Textgröße in px</title>
+                                    </meta>
+                                    <params>
+                                        <param name="min" value="12"/>
+                                        <param name="max" value="48"/>
+                                        <param name="step" value="2"/>
+                                        <param name="multiple_of" value="1"/>
+                                    </params>
+                                </property>
+                                <property name="sliderimagetextcolor" type="color" colspan="2">
+                                    <meta>
+                                        <title lang="en">Textcolor</title>
+                                        <title lang="de">Textfarbe</title>
+                                    </meta>
+                                </property>
                             </properties>
                         </type>
                     </types>
