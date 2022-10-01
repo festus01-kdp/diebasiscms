@@ -3,6 +3,9 @@ stages:
 
 deploy to diebasis.kdpernak.de:
   stage: deploy
+  before_script:
+    - eval $(ssh-agent) -s
+    - echo "DEPLOYMENT_KEY" | tr -d '\r' | ssh-add -
   script:
     - echo "Hier bin ich"
     - ls -la
